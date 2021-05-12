@@ -138,6 +138,11 @@ tasks:
     dest: ./resources/[qb]/qb-core
     ref: main
     src: https://github.com/qbcore-framework/qb-core
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-adminmenu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-adminmenu
 
   - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
