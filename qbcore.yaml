@@ -13,11 +13,11 @@ tasks:
     
   - action: move_path
     src: ./tmp/qbcore/server.cfg
-    dest: ./resources/server.cfg
+    dest: ./server.cfg
 
   - action: move_path
     src: ./tmp/qbcore/myLogo.png
-    dest: ./resources/myLogo.png
+    dest: ./myLogo.png
 
   # FiveM Resources
 
@@ -108,7 +108,7 @@ tasks:
 
   - action: download_github
     dest: ./resources/[voice]/rp-radio
-    ref: main
+    ref: master
     src: https://github.com/qbcore-framework/rp-radio
 
   # QB
