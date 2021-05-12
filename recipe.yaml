@@ -178,7 +178,7 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-blackjack
   -
-        action: download_github
+    action: download_github
     dest: ./resources/[qb]/qb-atms
     ref: main
     src: https://github.com/qbcore-framework/qb-atms
@@ -218,7 +218,7 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-houses
   -
-        action: download_github
+    action: download_github
     dest: ./resources/[qb]/qb-garages
     ref: main
     src: https://github.com/qbcore-framework/qb-garages
@@ -288,7 +288,7 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-vineyard
   -
-        action: download_github
+    action: download_github
     dest: ./resources/[qb]/qb-weapons
     ref: main
     src: https://github.com/qbcore-framework/qb-weapons
