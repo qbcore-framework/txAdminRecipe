@@ -22,15 +22,15 @@ tasks:
   # FiveM Resources
 
   - action: ensure_dir
-    path: ./resources[fivem]
+    path: ./resources/[fivem]
 
   - action: download_github
-    dest: ./resources[fivem]
+    dest: ./resources/[fivem]
     src: https://github.com/citizenfx/cfx-server-data
 
   # Standalone
   - action: ensure_dir
-    path: ./resources[standalone]
+    path: ./resources/[standalone]
 
   - action: download_file
     path: ./tmp/files/ghmattimysql.zip
@@ -101,7 +101,7 @@ tasks:
   # Voice
 
   - action: ensure_dir
-    path: ./resources[voice]
+    path: ./resources/[voice]
 
   - action: download_github
     dest: ./resources/[voice]/pma-voice
@@ -116,7 +116,7 @@ tasks:
   # QB
 
   - action: ensure_dir
-    path: ./resources[qb]
+    path: ./resources/[qb]
 
   # Mojito Scripts
   - action: download_github
