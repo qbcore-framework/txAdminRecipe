@@ -125,12 +125,12 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-gangs
     ref: main
-    src: https://github.com/Mojito-Fivem/qb-gangs
+    src: https://github.com/Mojito-Fivem/qb-gangs/qb-gangs
 
   - action: download_github
     dest: ./resources/[qb]/qb-billing
     ref: main
-    src: https://github.com/Mojito-Fivem/qb-billing
+    src: https://github.com/Mojito-Fivem/qb-billing/qb-billing
 
   # QB Github Scripts
 
