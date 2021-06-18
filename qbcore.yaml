@@ -79,7 +79,7 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/dpemotes
     ref: master
-    src: https://github.com/andristum/dpemotes
+    src: https://github.com/qbcore-framework/dpemotes
 
   - action: download_github
     dest: ./resources/[standalone]/linden_outlawalert
