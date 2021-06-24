@@ -164,6 +164,11 @@ tasks:
     dest: ./resources/[qb]/qb-ifruitstore
     ref: main
     src: https://github.com/qbcore-framework/qb-ifruitstore
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-hud
+    ref: main
+    src: https://github.com/qbcore-framework/qb-hud
 
   - action: download_github
     dest: ./resources/[qb]/qb-bossmenu
