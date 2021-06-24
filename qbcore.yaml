@@ -52,11 +52,6 @@ tasks:
     src: https://github.com/Bob74/bob74_ipl
 
   - action: download_github
-    dest: ./resources/[standalone]/cosmo_hud
-    ref: main
-    src: https://github.com/qbcore-framework/cosmo_hud
-
-  - action: download_github
     dest: ./resources/[standalone]/progressbar
     ref: main
     src: https://github.com/qbcore-framework/progressbar
@@ -67,29 +62,9 @@ tasks:
     src: https://github.com/qbcore-framework/connectqueue
 
   - action: download_github
-    dest: ./resources/[standalone]/qalle_coords
-    ref: master
-    src: https://github.com/qbcore-framework/qalle_coords
-
-  - action: download_github
-    dest: ./resources/[standalone]/esx_tpnrp_luckywheel
-    ref: master
-    src: https://github.com/qbcore-framework/esx_tpnrp_luckywheel
-
-  - action: download_github
     dest: ./resources/[standalone]/dpemotes
     ref: master
     src: https://github.com/qbcore-framework/dpemotes
-
-  - action: download_github
-    dest: ./resources/[standalone]/linden_outlawalert
-    ref: master
-    src: https://github.com/qbcore-framework/linden_outlawalert
-
-  - action: download_github
-    dest: ./resources/[standalone]/mdt
-    ref: master
-    src: https://github.com/qbcore-framework/mdt
 
   - action: download_github
     dest: ./resources/[standalone]/LegacyFuel
@@ -117,10 +92,6 @@ tasks:
     path: ./resources/[qb]
 
   # Mojito Scripts
-  - action: download_github
-    dest: ./resources/[qb]/qb-scoreboard
-    ref: main
-    src: https://github.com/Mojito-Fivem/qb-scoreboard
 
   - action: download_github
     dest: ./resources/[qb]/qb-gangs
@@ -133,6 +104,11 @@ tasks:
     src: https://github.com/Mojito-Fivem/qb-billing/qb-billing
 
   # QB Github Scripts
+  
+  - action: download_github
+    dest: ./resources/[qb]/qb-scoreboard
+    ref: main
+    src: https://github.com/qbcore-framework/qb-scoreboard
 
   - action: download_github
     dest: ./resources/[qb]/qb-core
