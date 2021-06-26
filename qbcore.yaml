@@ -55,6 +55,11 @@ tasks:
     dest: ./resources/[standalone]/progressbar
     ref: main
     src: https://github.com/qbcore-framework/progressbar
+    
+  - action: download_github
+    dest: ./resources/[standalone]/mhacking
+    ref: main
+    src: https://github.com/qbcore-framework/mhacking
 
   - action: download_github
     dest: ./resources/[standalone]/connectqueue
