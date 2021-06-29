@@ -154,6 +154,11 @@ tasks:
     dest: ./resources/[qb]/qb-coke
     ref: main
     src: https://github.com/qbcore-framework/qb-coke
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-prison
+    ref: main
+    src: https://github.com/qbcore-framework/qb-prison
 
   - action: download_github
     dest: ./resources/[qb]/qb-blackjack
