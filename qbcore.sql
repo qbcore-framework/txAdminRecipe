@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `apartments` (
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=4144 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `permissions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   `permission` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `steam` (`steam`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `bans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `bans` (
   KEY `license` (`license`),
   KEY `discord` (`discord`),
   KEY `ip` (`ip`)
-) ENGINE=InnoDB AUTO_INCREMENT=518 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `bills` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -43,15 +43,15 @@ CREATE TABLE IF NOT EXISTS `bills` (
   `amount` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1111 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `crypto` (
-  `#` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `crypto` varchar(50) NOT NULL DEFAULT 'qbit',
   `worth` int(11) NOT NULL DEFAULT 0,
   `history` text DEFAULT NULL,
   PRIMARY KEY (`#`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `crypto_transactions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -61,16 +61,16 @@ CREATE TABLE IF NOT EXISTS `crypto_transactions` (
   `date` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=939 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `dealers` (
-  `#` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '0',
   `coords` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   `time` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   `createdby` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`#`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `gloveboxitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `gloveboxitems` (
   `type` varchar(255) DEFAULT NULL,
   `slot` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `gloveboxitemsnew` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `houselocations` (
   `garage` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `player_houses` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `player_houses` (
   KEY `house` (`house`),
   KEY `citizenid` (`citizenid`),
   KEY `identifier` (`identifier`)
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `house_plants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `house_plants` (
   PRIMARY KEY (`id`),
   KEY `building` (`building`),
   KEY `plantid` (`plantid`)
-) ENGINE=InnoDB AUTO_INCREMENT=7123 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `lapraces` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -146,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `lapraces` (
   `raceid` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `raceid` (`raceid`)
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `moneysafes` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `moneysafes` (
   `money` int NOT NULL DEFAULT '0',
   `transactions` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `occasion_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -167,10 +167,10 @@ CREATE TABLE IF NOT EXISTS `occasion_vehicles` (
   `occasionid` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `occasionId` (`occasionid`)
-) ENGINE=InnoDB AUTO_INCREMENT=325 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `phone_invoices` (
-  `#` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
   `amount` int(11) NOT NULL DEFAULT 0,
   `invoiceid` varchar(50) NOT NULL DEFAULT '0',
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `player_mails` (
   `button` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=67023 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `phone_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -200,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `phone_messages` (
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `number` (`number`)
-) ENGINE=InnoDB AUTO_INCREMENT=6732 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `phone_tweets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `phone_tweets` (
   `date` datetime DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5436 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `player_contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `player_contacts` (
   `iban` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=12433 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `playerammo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -228,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `playerammo` (
   `ammo` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3638 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `playeritems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -239,10 +239,10 @@ CREATE TABLE IF NOT EXISTS `playeritems` (
   `type` varchar(255) NOT NULL,
   `slot` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=255891 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `players` (
-  `#` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(255) NOT NULL,
   `cid` int(11) DEFAULT NULL,
   `steam` varchar(255) NOT NULL,
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   KEY `citizenid` (`citizenid`),
   KEY `last_updated` (`last_updated`),
   KEY `steam` (`steam`)
-) ENGINE=InnoDB AUTO_INCREMENT=4189 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `playerskins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -271,10 +271,10 @@ CREATE TABLE IF NOT EXISTS `playerskins` (
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `active` (`active`)
-) ENGINE=InnoDB AUTO_INCREMENT=43010 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `player_boats` (
-  `#` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
   `model` varchar(50) DEFAULT NULL,
   `plate` varchar(50) DEFAULT NULL,
@@ -283,7 +283,7 @@ CREATE TABLE IF NOT EXISTS `player_boats` (
   `state` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`#`),
   KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `player_outfits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -295,10 +295,10 @@ CREATE TABLE IF NOT EXISTS `player_outfits` (
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `outfitId` (`outfitId`)
-) ENGINE=InnoDB AUTO_INCREMENT=8970 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `player_vehicles` (
-  `#` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `steam` varchar(50) DEFAULT NULL,
   `citizenid` varchar(50) DEFAULT NULL,
   `vehicle` varchar(50) DEFAULT NULL,
@@ -318,16 +318,16 @@ CREATE TABLE IF NOT EXISTS `player_vehicles` (
   KEY `plate` (`plate`),
   KEY `citizenid` (`citizenid`),
   KEY `steam` (`steam`)
-) ENGINE=InnoDB AUTO_INCREMENT=2432 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `player_warns` (
-  `#` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `senderIdentifier` varchar(50) DEFAULT NULL,
   `targetIdentifier` varchar(50) DEFAULT NULL,
   `reason` text DEFAULT NULL,
   `warnId` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`#`)
-) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `stashitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -338,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `stashitems` (
   `type` varchar(255) NOT NULL,
   `slot` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15024 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `stashitemsnew` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -346,7 +346,7 @@ CREATE TABLE IF NOT EXISTS `stashitemsnew` (
   `items` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `stash` (`stash`)
-) ENGINE=InnoDB AUTO_INCREMENT=2109 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `trunkitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -357,7 +357,7 @@ CREATE TABLE IF NOT EXISTS `trunkitems` (
   `type` varchar(255) NOT NULL,
   `slot` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=633 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `trunkitemsnew` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -365,7 +365,7 @@ CREATE TABLE IF NOT EXISTS `trunkitemsnew` (
   `items` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `plate` (`plate`)
-) ENGINE=InnoDB AUTO_INCREMENT=1127 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `bank_accounts` (
   `record_id` bigint(255) NOT NULL,
