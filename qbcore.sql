@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `crypto` (
   `crypto` varchar(50) NOT NULL DEFAULT 'qbit',
   `worth` int(11) NOT NULL DEFAULT 0,
   `history` text DEFAULT NULL,
-  PRIMARY KEY (`#`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `crypto_transactions` (
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `dealers` (
   `coords` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   `time` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   `createdby` varchar(50) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`#`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `gloveboxitems` (
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `phone_invoices` (
   `citizenid` varchar(50) DEFAULT NULL,
   `amount` int(11) NOT NULL DEFAULT 0,
   `invoiceid` varchar(50) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`#`),
+  PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -256,7 +256,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `metadata` text NOT NULL,
   `inventory` longtext DEFAULT NULL,
   `last_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`#`),
+  PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `last_updated` (`last_updated`),
   KEY `steam` (`steam`)
@@ -281,7 +281,7 @@ CREATE TABLE IF NOT EXISTS `player_boats` (
   `boathouse` varchar(50) DEFAULT NULL,
   `fuel` int(11) NOT NULL DEFAULT 100,
   `state` int(11) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`#`),
+  PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
@@ -314,7 +314,7 @@ CREATE TABLE IF NOT EXISTS `player_vehicles` (
   `depotprice` int(11) NOT NULL DEFAULT 0,
   `drivingdistance` int(50) DEFAULT NULL,
   `status` text DEFAULT NULL,
-  PRIMARY KEY (`#`),
+  PRIMARY KEY (`id`),
   KEY `plate` (`plate`),
   KEY `citizenid` (`citizenid`),
   KEY `steam` (`steam`)
@@ -326,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `player_warns` (
   `targetIdentifier` varchar(50) DEFAULT NULL,
   `reason` text DEFAULT NULL,
   `warnId` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`#`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `stashitems` (
