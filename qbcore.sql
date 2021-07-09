@@ -12,17 +12,17 @@ CREATE TABLE IF NOT EXISTS `apartments` (
 CREATE TABLE IF NOT EXISTS `permissions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  `steam` varchar(255) NOT NULL,
+  `license` varchar(255) NOT NULL,
   `license` varchar(255) NOT NULL,
   `permission` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `steam` (`steam`)
+  KEY `license` (`license`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `bans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
-  `steam` varchar(50) DEFAULT NULL,
+  `license` varchar(50) DEFAULT NULL,
   `license` varchar(50) DEFAULT NULL,
   `discord` varchar(50) DEFAULT NULL,
   `ip` varchar(50) DEFAULT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `bans` (
   `expire` int(11) DEFAULT NULL,
   `bannedby` varchar(255) NOT NULL DEFAULT 'LeBanhammer',
   PRIMARY KEY (`id`),
-  KEY `steam` (`steam`),
+  KEY `license` (`license`),
   KEY `license` (`license`),
   KEY `discord` (`discord`),
   KEY `ip` (`ip`)
@@ -245,7 +245,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(255) NOT NULL,
   `cid` int(11) DEFAULT NULL,
-  `steam` varchar(255) NOT NULL,
+  `license` varchar(255) NOT NULL,
   `license` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `money` text NOT NULL,
@@ -259,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `last_updated` (`last_updated`),
-  KEY `steam` (`steam`)
+  KEY `license` (`license`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `playerskins` (
@@ -299,7 +299,7 @@ CREATE TABLE IF NOT EXISTS `player_outfits` (
 
 CREATE TABLE IF NOT EXISTS `player_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `steam` varchar(50) DEFAULT NULL,
+  `license` varchar(50) DEFAULT NULL,
   `citizenid` varchar(50) DEFAULT NULL,
   `vehicle` varchar(50) DEFAULT NULL,
   `hash` varchar(50) DEFAULT NULL,
@@ -317,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `player_vehicles` (
   PRIMARY KEY (`id`),
   KEY `plate` (`plate`),
   KEY `citizenid` (`citizenid`),
-  KEY `steam` (`steam`)
+  KEY `license` (`license`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `player_warns` (
