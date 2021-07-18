@@ -1,50 +1,34 @@
+$engine: 3
+$onesync: on
 name: QBCore Framework Build
-version: 1.2.0
-author: JericoFx & Kakarot & Mojito
+version: 1.3.0
+author: JericoFx & Kakarot & Mojito & Hamy
 description: Complete RP Server For FiveM
 
 tasks:
-  # server.cfg and logo
+  
+  
+  #  Download Files
 
   - action: download_github
     src: https://github.com/qbcore-framework/txAdminRecipe
     ref: main
     dest: ./tmp/qbcore
     
-  - action: move_path
-    src: ./tmp/qbcore/server.cfg
-    dest: ./server.cfg
-
-  - action: move_path
-    src: ./tmp/qbcore/myLogo.png
-    dest: ./myLogo.png
-
-  # FiveM Resources
 
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[fivem]
 
-  # Standalone
-  - action: ensure_dir
-    path: ./resources/[standalone]
 
   - action: download_file
     path: ./tmp/files/ghmattimysql.zip
     url: https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip
 
-  - action: unzip
-    dest: ./resources/[standalone]
-    src: ./tmp/files/ghmattimysql.zip
-
   - action: download_file
     path: ./tmp/menuv.zip
     url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
-
-  - action: unzip
-    dest: ./resources/[standalone]/menuv
-    src: ./tmp/menuv.zip
 
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
@@ -75,11 +59,6 @@ tasks:
     dest: ./resources/[standalone]/LegacyFuel
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
-    
-  # Voice
-
-  - action: ensure_dir
-    path: ./resources/[voice]
 
   - action: download_github
     dest: ./resources/[voice]/pma-voice
@@ -90,13 +69,6 @@ tasks:
     dest: ./resources/[voice]/rp-radio
     ref: master
     src: https://github.com/qbcore-framework/rp-radio
-
-  # QB
-
-  - action: ensure_dir
-    path: ./resources/[qb]
-
-  # Mojito Scripts
 
   - action: download_github
     dest: ./resources/[qb]/qb-gangs
@@ -495,11 +467,51 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
 
-  # Database
+  # Unzip Files
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/ghmattimysql.zip
+
+
+  - action: unzip
+    dest: ./resources/[standalone]/menuv
+    src: ./tmp/menuv.zip
+
+  # Create directories
+
+  - action: ensure_dir
+    path: ./resources/[voice]
+
+  - action: ensure_dir
+    path: ./resources/[fivem]
+
+  - action: ensure_dir
+    path: ./resources/[qb]
+
+  - action: ensure_dir
+    path: ./resources/[standalone]
+
+    
+  # Move into directories
+
+  - action: move_path
+    src: ./tmp/qbcore/server.cfg
+    dest: ./server.cfg
+
+  - action: move_path
+    src: ./tmp/qbcore/myLogo.png
+    dest: ./myLogo.png
+
+  # Connect to the database
+
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
 
-  # Remove Temp Path
+  # Clean up
+
   - action: remove_path
     path: ./tmp
+
+
+
