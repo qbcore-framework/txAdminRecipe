@@ -502,16 +502,71 @@ tasks:
     src: ./tmp/qbcore/myLogo.png
     dest: ./myLogo.png
 
+  - action: move_path
+    src: ./resources/[qb]/qb-billing/qb-billing
+    dest: ./resources/[qb]/qb-billing
+
+  - action: move_path
+    src: ./resources/[qb]/qb-gangs/qb-gangs
+    dest: ./resources/[qb]/qb-gangs
+
+  - action: move_path
+    src: ./resources/[qb]/qb-vehiclerental/qb-vehiclerental
+    dest: ./resources/[qb]/qb-vehiclerental
+
+
   # Connect to the database
 
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
 
+  - action: write_file
+    file: ./resources/[standalone]/ghmattimysql/config.json
+    data: |
+      {
+        "user": "{{dbUsername}}",
+        "password": "{{dbPassword}}",
+        "host": "{{dbHost}}",
+        "port": 3306,
+        "database": "{{dbName}}"
+      }
+
+  - action: replace_string
+    mode: all_vars
+    file:
+      - ./resources/[standalone]/ghmattimysql/config.json
+
   # Clean up
 
   - action: remove_path
     path: ./tmp
+  - action: remove_path
+    path: ./resources/[fivem]/[test]
+
+  - action: remove_path
+    path: ./resources/[fivem]/[local]
+
+  - action: remove_path
+    path: ./resources/[fivem]/[gameplay]/chat-theme-gtao
+
+
+  - action: remove_path
+    path: ./resources/[fivem]/[gameplay]/[examples]
+
+
+  - action: remove_path
+    path: ./resources/[fivem]/[system]/sessionmanager-rdr3
+
+  - action: remove_path
+    path: ./resources/[fivem]/[system]/runcode
+
+
+  - action: remove_path
+    path: ./resources/[fivem]/[system]/rconlog
+
+  - action: remove_path
+    path: ./resources/[fivem]/[gamemodes]/[maps]
 
 
 
