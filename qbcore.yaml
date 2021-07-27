@@ -75,11 +75,6 @@ tasks:
     ref: main
     src: https://github.com/Mojito-Fivem/qb-gangs/qb-gangs
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-billing
-    ref: main
-    src: https://github.com/Mojito-Fivem/qb-billing/qb-billing
-
   # QB Github Scripts
   
   - action: download_github
@@ -504,11 +499,6 @@ tasks:
 
     # move to tmp folder
   - action: move_path
-    src: ./resources/[qb]/qb-billing/qb-billing
-    dest: ./resources/[tmp]/qb-billing
-    overwrite: true
-
-  - action: move_path
     src: ./resources/[qb]/qb-gangs/qb-gangs
     dest: ./resources/[tmp]/qb-gangs
     overwrite: true  
@@ -516,11 +506,6 @@ tasks:
 
 
     # move to proper folder
-  - action: move_path
-    src: ./resources/[tmp]/qb-billing/
-    dest: ./resources/[qb]/qb-billing
-    overwrite: true
-
   - action: move_path
     src: ./resources/[tmp]/qb-gangs
     dest: ./resources/[qb]/qb-gangs
