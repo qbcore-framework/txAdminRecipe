@@ -126,14 +126,6 @@ CREATE TABLE IF NOT EXISTS `lapraces` (
   KEY `raceid` (`raceid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `moneysafes` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `safe` varchar(50) NOT NULL DEFAULT '0',
-  `money` int NOT NULL DEFAULT '0',
-  `transactions` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
 CREATE TABLE IF NOT EXISTS `occasion_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `seller` varchar(50) DEFAULT NULL,
@@ -311,14 +303,6 @@ CREATE TABLE `bank_statements` (
   `date` varchar(50) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE `companies` (
-  `name` tinytext DEFAULT NULL,
-  `label` tinytext DEFAULT NULL,
-  `owner` tinytext DEFAULT NULL,
-  `employees` tinytext DEFAULT NULL,
-  `money` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `gloveboxitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
