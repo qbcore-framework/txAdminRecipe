@@ -153,11 +153,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-bossmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-moneysafe
-    ref: main
-    src: https://github.com/qbcore-framework/qb-moneysafe
-
-  - action: download_github
     dest: ./resources/[qb]/qb-weed
     ref: main
     src: https://github.com/qbcore-framework/qb-weed
@@ -186,11 +181,6 @@ tasks:
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
     src: https://github.com/qbcore-framework/qb-ambulancejob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-companies
-    ref: main
-    src: https://github.com/qbcore-framework/qb-companies
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclefailure
