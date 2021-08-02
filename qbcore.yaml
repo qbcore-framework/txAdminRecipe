@@ -37,7 +37,7 @@ tasks:
     
   - action: download_github
     dest: ./resources/[standalone]/safecracker
-    ref: master
+    ref: main
     src: https://github.com/qbcore-framework/safecracker
 
   - action: download_github
