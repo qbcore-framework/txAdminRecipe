@@ -34,6 +34,11 @@ tasks:
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
     src: https://github.com/Bob74/bob74_ipl
+    
+  - action: download_github
+    dest: ./resources/[standalone]/safecracker
+    ref: main
+    src: https://github.com/qbcore-framework/safecracker
 
   - action: download_github
     dest: ./resources/[standalone]/progressbar
