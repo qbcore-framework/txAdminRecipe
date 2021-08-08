@@ -164,16 +164,6 @@ CREATE TABLE IF NOT EXISTS `phone_messages` (
   KEY `number` (`number`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `phone_tweets` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50) DEFAULT NULL,
-  `sender` varchar(50) DEFAULT NULL,
-  `message` text DEFAULT NULL,
-  `date` datetime DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
-
 CREATE TABLE IF NOT EXISTS `player_contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
