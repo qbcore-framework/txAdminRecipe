@@ -6,10 +6,7 @@ author: JericoFx & Kakarot & Mojito & Hamy
 description: Complete RP Server For FiveM
 
 tasks:
-  
-  
-  #  Download Files
-
+  #  Download Base Files
   - action: download_github
     src: https://github.com/qbcore-framework/txAdminRecipe
     ref: main
@@ -19,7 +16,7 @@ tasks:
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
-    dest: ./resources/[fivem]
+    dest: ./resources/[cfx-default]
 
 
   - action: download_file
@@ -81,7 +78,6 @@ tasks:
     src: https://github.com/Mojito-Fivem/qb-gangs/qb-gangs
 
   # QB Github Scripts
-  
   - action: download_github
     dest: ./resources/[qb]/qb-scoreboard
     ref: main
@@ -464,12 +460,11 @@ tasks:
     src: ./tmp/menuv.zip
 
   # Create directories
-
   - action: ensure_dir
     path: ./resources/[voice]
 
   - action: ensure_dir
-    path: ./resources/[fivem]
+    path: ./resources/[cfx-default]
 
   - action: ensure_dir
     path: ./resources/[qb]
@@ -534,34 +529,34 @@ tasks:
   - action: remove_path
     path: ./tmp
   - action: remove_path
-    path: ./resources/[fivem]/[test]
+    path: ./resources/[cfx-default]/[test]
 
   - action: remove_path
     path: ./resources/[tmp]
 
   - action: remove_path
-    path: ./resources/[fivem]/[local]
+    path: ./resources/[cfx-default]/[local]
 
   - action: remove_path
-    path: ./resources/[fivem]/[gameplay]/chat-theme-gtao
-
-
-  - action: remove_path
-    path: ./resources/[fivem]/[gameplay]/[examples]
+    path: ./resources/[cfx-default]/[gameplay]/chat-theme-gtao
 
 
   - action: remove_path
-    path: ./resources/[fivem]/[system]/sessionmanager-rdr3
-
-  - action: remove_path
-    path: ./resources/[fivem]/[system]/runcode
+    path: ./resources/[cfx-default]/[gameplay]/[examples]
 
 
   - action: remove_path
-    path: ./resources/[fivem]/[system]/rconlog
+    path: ./resources/[cfx-default]/[system]/sessionmanager-rdr3
 
   - action: remove_path
-    path: ./resources/[fivem]/[gamemodes]/[maps]
+    path: ./resources/[cfx-default]/[system]/runcode
+
+
+  - action: remove_path
+    path: ./resources/[cfx-default]/[system]/rconlog
+
+  - action: remove_path
+    path: ./resources/[cfx-default]/[gamemodes]/[maps]
 
 
 
