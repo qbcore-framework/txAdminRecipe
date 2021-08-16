@@ -2,8 +2,8 @@ $engine: 3
 $onesync: on
 name: QBCore Framework
 version: 2.0.0
-author: JericoFx & Kakarot & Mojito & Hamy
-description: Complete RP Server For FiveM based on QBCore
+author: JericoFx & Kakarot & Hamy
+description: An advanced FiveM RP framework including jobs, gangs, housing & more!
 
 tasks:
   #  Download Base Files
@@ -99,10 +99,9 @@ tasks:
     src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
-    src: https://github.com/Mojito-Fivem/qb-gangs
-    ref: bdb84c3f3fe2ef73462fc5c25cb9f97b779ded60
-    subpath: qb-gangs # NOTE: check if Mojito already moved the folder
-    dest: ./resources/[qb]/qb-gangs
+    src: ./resources/[qb]/qb-gangmenu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-gangmenu
 
   - action: download_github
     dest: ./resources/[qb]/qb-scoreboard
