@@ -100,8 +100,7 @@ tasks:
 
   - action: download_github
     src: https://github.com/Mojito-Fivem/qb-gangs
-    ref: bdb84c3f3fe2ef73462fc5c25cb9f97b779ded60
-    subpath: qb-gangs # NOTE: check if Mojito already moved the folder
+    ref: main
     dest: ./resources/[qb]/qb-gangs
 
   - action: download_github
