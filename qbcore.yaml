@@ -1,9 +1,9 @@
 $engine: 3
 $onesync: on
-name: QBCore Framework Build
-version: 1.3.0
+name: QBCore Framework
+version: 2.0.0
 author: JericoFx & Kakarot & Mojito & Hamy
-description: Complete RP Server For FiveM
+description: Complete RP Server For FiveM based on QBCore
 
 tasks:
   #  Download Base Files
@@ -83,12 +83,12 @@ tasks:
 
   - action: download_github
     dest: ./resources/[voice]/pma-voice
-    ref: main
+    ref: 25306dd4982c23d33edc91fd977a7f19f206e329
     src: https://github.com/AvarianKnight/pma-voice
 
   - action: download_github
     dest: ./resources/[voice]/rp-radio
-    ref: master
+    ref: e9309f7f5ef52f9ad8482f5e55d10da56606a7c9
     src: https://github.com/qbcore-framework/rp-radio
 
 
@@ -208,6 +208,9 @@ tasks:
     dest: ./resources/[qb]/qb-vehiclefailure
     ref: main
     src: https://github.com/qbcore-framework/qb-vehiclefailure
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-radialmenu
@@ -383,6 +386,9 @@ tasks:
     dest: ./resources/[qb]/qb-jewelery
     ref: main
     src: https://github.com/qbcore-framework/qb-jewelery
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-bankrobbery
