@@ -11,21 +11,40 @@ tasks:
     src: https://github.com/qbcore-framework/txAdminRecipe
     ref: main
     dest: ./tmp/qbcore
+
+  - action: move_path
+    src: ./tmp/qbcore/server.cfg
+    dest: ./server.cfg
+
+  - action: move_path
+    src: ./tmp/qbcore/myLogo.png
+    dest: ./myLogo.png
+
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/qbcore/qbcore.sql
     
 
+  # Downloading Standalone resources
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
 
-
   - action: download_file
     path: ./tmp/files/ghmattimysql.zip
     url: https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/ghmattimysql.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
     url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
+  - action: unzip
+    dest: ./resources/[standalone]/menuv
+    src: ./tmp/menuv.zip
 
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
@@ -72,21 +91,23 @@ tasks:
     ref: master
     src: https://github.com/qbcore-framework/rp-radio
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-gangs
-    ref: main
-    src: https://github.com/Mojito-Fivem/qb-gangs/qb-gangs
 
-  # QB Github Scripts
-  - action: download_github
-    dest: ./resources/[qb]/qb-scoreboard
-    ref: main
-    src: https://github.com/qbcore-framework/qb-scoreboard
-
+  # Downloading QBCore resources
   - action: download_github
     dest: ./resources/[qb]/qb-core
     ref: main
     src: https://github.com/qbcore-framework/qb-core
+
+  - action: download_github
+    src: https://github.com/Mojito-Fivem/qb-gangs
+    ref: bdb84c3f3fe2ef73462fc5c25cb9f97b779ded60
+    subpath: qb-gangs # NOTE: check if Mojito already moved the folder
+    dest: ./resources/[qb]/qb-gangs
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-scoreboard
+    ref: main
+    src: https://github.com/qbcore-framework/qb-scoreboard
     
   - action: download_github
     dest: ./resources/[qb]/qb-adminmenu
@@ -323,7 +344,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-oxyrun
 
-
   - action: download_github
     dest: ./resources/[qb]/qb-carwash
     ref: main
@@ -449,65 +469,8 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
 
-  # Unzip Files
-  - action: unzip
-    dest: ./resources/[standalone]
-    src: ./tmp/files/ghmattimysql.zip
 
-
-  - action: unzip
-    dest: ./resources/[standalone]/menuv
-    src: ./tmp/menuv.zip
-
-  # Create directories
-  - action: ensure_dir
-    path: ./resources/[voice]
-
-  - action: ensure_dir
-    path: ./resources/[cfx-default]
-
-  - action: ensure_dir
-    path: ./resources/[qb]
-
-  - action: ensure_dir
-    path: ./resources/[standalone]
-
-  - action: ensure_dir
-    path: ./resources/[tmp]
-
-    
-  # Move into directories
-
-  - action: move_path
-    src: ./tmp/qbcore/server.cfg
-    dest: ./server.cfg
-
-  - action: move_path
-    src: ./tmp/qbcore/myLogo.png
-    dest: ./myLogo.png
-
-
-    # move to tmp folder
-  - action: move_path
-    src: ./resources/[qb]/qb-gangs/qb-gangs
-    dest: ./resources/[tmp]/qb-gangs
-    overwrite: true  
-
-
-
-    # move to proper folder
-  - action: move_path
-    src: ./resources/[tmp]/qb-gangs
-    dest: ./resources/[qb]/qb-gangs
-    overwrite: true  
-
-
-  # Connect to the database
-
-  - action: connect_database
-  - action: query_database
-    file: ./tmp/qbcore/qbcore.sql
-
+  # Configuring ghmattimysql
   - action: write_file
     file: ./resources/[standalone]/ghmattimysql/config.json
     data: |
@@ -524,39 +487,24 @@ tasks:
     file:
       - ./resources/[standalone]/ghmattimysql/config.json
 
-  # Clean up
 
+  # Clean up
   - action: remove_path
     path: ./tmp
+
   - action: remove_path
     path: ./resources/[cfx-default]/[test]
-
-  - action: remove_path
-    path: ./resources/[tmp]
-
   - action: remove_path
     path: ./resources/[cfx-default]/[local]
-
   - action: remove_path
     path: ./resources/[cfx-default]/[gameplay]/chat-theme-gtao
-
-
   - action: remove_path
     path: ./resources/[cfx-default]/[gameplay]/[examples]
-
-
   - action: remove_path
     path: ./resources/[cfx-default]/[system]/sessionmanager-rdr3
-
   - action: remove_path
     path: ./resources/[cfx-default]/[system]/runcode
-
-
   - action: remove_path
     path: ./resources/[cfx-default]/[system]/rconlog
-
   - action: remove_path
     path: ./resources/[cfx-default]/[gamemodes]/[maps]
-
-
-
