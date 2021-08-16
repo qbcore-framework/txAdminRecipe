@@ -99,7 +99,7 @@ tasks:
     src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
-    src: ./resources/[qb]/qb-gangmenu
+    dest: ./resources/[qb]/qb-gangmenu
     ref: main
     src: https://github.com/qbcore-framework/qb-gangmenu
 
