@@ -98,6 +98,7 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-core
 
+  # Licesened under CC-BY-NC-SA 3.0 (https://creativecommons.org/licenses/by-nc-sa/3.0/)
   - action: download_github
     src: https://github.com/Mojito-Fivem/qb-gangs
     ref: main
