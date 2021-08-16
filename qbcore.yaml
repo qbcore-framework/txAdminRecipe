@@ -87,9 +87,9 @@ tasks:
     src: https://github.com/AvarianKnight/pma-voice
 
   - action: download_github
-    dest: ./resources/[voice]/rp-radio
-    ref: e9309f7f5ef52f9ad8482f5e55d10da56606a7c9
-    src: https://github.com/qbcore-framework/rp-radio
+    dest: ./resources/[voice]/qb-radio
+    ref: main
+    src: https://github.com/qbcore-framework/qb-radio
 
 
   # Downloading QBCore resources
