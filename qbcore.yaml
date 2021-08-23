@@ -24,7 +24,6 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
-    
 
   # Downloading Standalone resources
   - action: download_github
@@ -100,7 +99,6 @@ tasks:
     dest: ./resources/[voice]/qb-radio
     ref: main
     src: https://github.com/qbcore-framework/qb-radio
-
 
   # Downloading QBCore resources
   - action: download_github
@@ -505,7 +503,6 @@ tasks:
     mode: all_vars
     file:
       - ./resources/[standalone]/ghmattimysql/config.json
-
 
   # Clean up
   - action: remove_path
