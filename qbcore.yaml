@@ -56,6 +56,11 @@ tasks:
     src: https://github.com/qbcore-framework/safecracker
 
   - action: download_github
+    dest: ./resources/[standalone]/fivem-vstancer
+    ref: main
+    src: https://github.com/qbcore-framework/fivem-vstancer
+
+  - action: download_github
     dest: ./resources/[standalone]/progressbar
     ref: main
     src: https://github.com/qbcore-framework/progressbar
@@ -486,7 +491,33 @@ tasks:
     dest: ./resources/[qb]/qb-bitmining
     ref: main
     src: https://github.com/qbcore-framework/qb-bitmining
-    
+  
+    - action: download_github
+    dest: ./resources/[qb]/qb-builderjob
+    ref: main
+    src: https://github.com/qbcore-framework/qb-builderjob
+
+    - action: download_github
+    dest: ./resources/[qb]/qb-companies
+    ref: main
+    src: https://github.com/qbcore-framework/qb-companies
+
+      - action: download_github
+    dest: ./resources/[qb]/qb-printer
+    ref: main
+    src: https://github.com/qbcore-framework/qb-printer
+
+      - action: download_github
+    dest: ./resources/[qb]/qb-mdt
+    ref: main
+    src: https://github.com/qbcore-framework/qb-mdt
+
+      - action: download_github
+    dest: ./resources/[qb]/qb-fishing
+    ref: main
+    src: https://github.com/qbcore-framework/qb-fishing
+
+
   # Configuring ghmattimysql
   - action: write_file
     file: ./resources/[standalone]/ghmattimysql/config.json
