@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `houselocations` (
   `owned` tinyint(2) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
   `tier` tinyint(2) DEFAULT NULL,
-  `garage` text NOT NULL DEFAULT '{"y":0,"x":0,"h":0,"z":0}',
+  `garage` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
