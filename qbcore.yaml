@@ -82,6 +82,11 @@ tasks:
     src: https://github.com/qbcore-framework/LegacyFuel
 
   - action: download_github
+    dest: ./resources/[standalone]/interact-sound
+    ref: master
+    src: https://github.com/plunkettscott/interact-sound
+
+  - action: download_github
     dest: ./resources/[voice]/pma-voice
     ref: 25306dd4982c23d33edc91fd977a7f19f206e329
     src: https://github.com/AvarianKnight/pma-voice
