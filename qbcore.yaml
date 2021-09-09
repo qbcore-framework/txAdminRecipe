@@ -357,11 +357,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-carwash
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vehiclepush
-    ref: main
-    src: https://github.com/qbcore-framework/qb-vehiclepush
-
-  - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-truckrobbery
