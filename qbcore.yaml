@@ -33,11 +33,11 @@ tasks:
     dest: ./resources/[cfx-default]
 
   - action: download_file
-    path: ./tmp/files/ghmattimysql.zip
-    url: https://github.com/GHMatti/ghmattimysql/releases/download/1.3.2/ghmattimysql.zip
+    path: ./tmp/files/oxmysql-1.1.0.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v1.1.0/oxmysql-1.1.0.zip
   - action: unzip
-    dest: ./resources/[standalone]
-    src: ./tmp/files/ghmattimysql.zip
+    dest: ./resources/[standalone]/oxmysql
+    src: ./tmp/files/oxmysql-1.1.0.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
@@ -473,25 +473,6 @@ tasks:
     dest: ./resources/[qb]/qb-interior
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
-
-
-  # Configuring ghmattimysql
-  - action: write_file
-    file: ./resources/[standalone]/ghmattimysql/config.json
-    data: |
-      {
-        "user": "{{dbUsername}}",
-        "password": "{{dbPassword}}",
-        "host": "{{dbHost}}",
-        "port": 3306,
-        "database": "{{dbName}}"
-      }
-
-  - action: replace_string
-    mode: all_vars
-    file:
-      - ./resources/[standalone]/ghmattimysql/config.json
-
 
   # Clean up
   - action: remove_path
