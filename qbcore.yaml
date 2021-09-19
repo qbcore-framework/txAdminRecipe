@@ -474,6 +474,11 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
 
+  - action: download_github
+    dest: ./resources/[qb]/breze_benefactor
+    ref: main
+    src: https://github.com/qbcore-framework/breze_benefactor
+
   # Clean up
   - action: remove_path
     path: ./tmp
