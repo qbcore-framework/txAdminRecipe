@@ -24,7 +24,7 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
-    
+
 
   # Downloading Standalone resources
   - action: download_github
@@ -33,11 +33,11 @@ tasks:
     dest: ./resources/[cfx-default]
 
   - action: download_file
-    path: ./tmp/files/oxmysql-1.4.0.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v1.4.0/oxmysql-v1.4.0.zip
+    path: ./tmp/files/oxmysql-1.4.1.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v1.4.1/oxmysql-v1.4.1.zip
   - action: unzip
     dest: ./resources/[standalone]
-    src: ./tmp/files/oxmysql-1.4.0.zip
+    src: ./tmp/files/oxmysql-1.4.1.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
@@ -50,7 +50,7 @@ tasks:
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
     src: https://github.com/Bob74/bob74_ipl
-    
+
   - action: download_github
     dest: ./resources/[standalone]/safecracker
     ref: main
@@ -65,7 +65,7 @@ tasks:
     dest: ./resources/[standalone]/interact-sound
     ref: master
     src: https://github.com/qbcore-framework/interact-sound
-    
+
   - action: download_github
     dest: ./resources/[standalone]/mhacking
     ref: main
@@ -112,7 +112,7 @@ tasks:
     dest: ./resources/[qb]/qb-scoreboard
     ref: main
     src: https://github.com/qbcore-framework/qb-scoreboard
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-adminmenu
     ref: main
@@ -147,7 +147,7 @@ tasks:
     dest: ./resources/[qb]/qb-coke
     ref: main
     src: https://github.com/qbcore-framework/qb-coke
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-prison
     ref: main
@@ -167,7 +167,7 @@ tasks:
     dest: ./resources/[qb]/qb-ifruitstore
     ref: main
     src: https://github.com/qbcore-framework/qb-ifruitstore
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-hud
     ref: main
