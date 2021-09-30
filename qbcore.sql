@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `houselocations` (
   `coords` text DEFAULT NULL,
   `owned` tinyint(1) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
-  `tier` tinyint(1) DEFAULT NULL,
+  `tier` smallint(1) DEFAULT NULL,
   `garage` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
