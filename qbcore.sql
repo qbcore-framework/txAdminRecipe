@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `houselocations` (
   `coords` text DEFAULT NULL,
   `owned` tinyint(1) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
-  `tier` smallint(1) DEFAULT NULL,
+  `tier` tinyint(4) DEFAULT NULL,
   `garage` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
@@ -146,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `player_mails` (
   `sender` varchar(50) DEFAULT NULL,
   `subject` varchar(50) DEFAULT NULL,
   `message` text DEFAULT NULL,
-  `read` tinyint(1) DEFAULT 0,
+  `read` tinyint(4) DEFAULT 0,
   `mailid` int(11) DEFAULT NULL,
   `date` timestamp NULL DEFAULT current_timestamp(),
   `button` text DEFAULT NULL,
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `playerskins` (
   `citizenid` varchar(255) NOT NULL,
   `model` varchar(255) NOT NULL,
   `skin` text NOT NULL,
-  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `active` tinyint(4) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `active` (`active`)
