@@ -34,7 +34,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/oxmysql-1.4.1.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v1.4.1/oxmysql-v1.4.1.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v1.5.0/oxmysql-v1.5.0.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql-1.4.1.zip
