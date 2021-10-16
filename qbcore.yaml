@@ -82,6 +82,11 @@ tasks:
     src: https://github.com/qbcore-framework/dpemotes
 
   - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: master
+    src: https://github.com/qbcore-framework/PolyZone
+
+  - action: download_github
     dest: ./resources/[standalone]/LegacyFuel
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
