@@ -62,6 +62,11 @@ tasks:
     src: https://github.com/qbcore-framework/progressbar
 
   - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: main
+    src: https://github.com/mkafrin/PolyZone
+
+  - action: download_github
     dest: ./resources/[standalone]/interact-sound
     ref: master
     src: https://github.com/qbcore-framework/interact-sound
