@@ -477,6 +477,11 @@ tasks:
     src: https://github.com/qbcore-framework/qb-lockpick
 
   - action: download_github
+    dest: ./resources/[qb]/qb-menu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-menu
+
+  - action: download_github
     dest: ./resources/[qb]/qb-interior
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
