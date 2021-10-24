@@ -161,11 +161,6 @@ tasks:
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-coke
-    ref: main
-    src: https://github.com/qbcore-framework/qb-coke
     
   - action: download_github
     dest: ./resources/[qb]/qb-prison
@@ -366,11 +361,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-afk
 
   - action: download_github
-    dest: ./resources/[qb]/qb-oxyrun
-    ref: main
-    src: https://github.com/qbcore-framework/qb-oxyrun
-
-  - action: download_github
     dest: ./resources/[qb]/qb-carwash
     ref: main
     src: https://github.com/qbcore-framework/qb-carwash
@@ -394,11 +384,6 @@ tasks:
     dest: ./resources/[qb]/qb-newsjob
     ref: main
     src: https://github.com/qbcore-framework/qb-newsjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-methlab
-    ref: main
-    src: https://github.com/qbcore-framework/qb-methlab
 
   - action: download_github
     dest: ./resources/[qb]/qb-jewelery
