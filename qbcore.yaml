@@ -1,7 +1,7 @@
 $engine: 3
 $onesync: on
 name: QBCore Framework
-version: 2.0.0
+version: 2.1.0
 author: JericoFx & Kakarot & Hamy
 description: An advanced FiveM RP framework including jobs, gangs, housing & more!
 
@@ -479,20 +479,3 @@ tasks:
   # Clean up
   - action: remove_path
     path: ./tmp
-
-  - action: remove_path
-    path: ./resources/[cfx-default]/[test]
-  - action: remove_path
-    path: ./resources/[cfx-default]/[local]
-  - action: remove_path
-    path: ./resources/[cfx-default]/[gameplay]/chat-theme-gtao
-  - action: remove_path
-    path: ./resources/[cfx-default]/[gameplay]/[examples]
-  - action: remove_path
-    path: ./resources/[cfx-default]/[system]/sessionmanager-rdr3
-  - action: remove_path
-    path: ./resources/[cfx-default]/[system]/runcode
-  - action: remove_path
-    path: ./resources/[cfx-default]/[system]/rconlog
-  - action: remove_path
-    path: ./resources/[cfx-default]/[gamemodes]/[maps]
