@@ -26,18 +26,18 @@ tasks:
     file: ./tmp/qbcore/qbcore.sql
     
 
-  # Downloading Standalone resources
+  # STANDALONE
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
 
   - action: download_file
-    path: ./tmp/files/oxmysql-1.6.3.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v1.6.3/oxmysql-v1.6.3.zip
+    path: ./tmp/files/oxmysql-1.7.0.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v1.7.0/oxmysql-v1.7.0.zip
   - action: unzip
     dest: ./resources/[standalone]
-    src: ./tmp/files/oxmysql-1.6.3.zip
+    src: ./tmp/files/oxmysql-1.7.0.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
@@ -82,10 +82,16 @@ tasks:
     src: https://github.com/qbcore-framework/dpemotes
 
   - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: master
+    src: https://github.com/qbcore-framework/PolyZone
+    
+  - action: download_github
     dest: ./resources/[standalone]/LegacyFuel
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
 
+    # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
     ref: 570d98718e13febcda0ca9beb938aac192b60fcb
@@ -95,6 +101,17 @@ tasks:
     dest: ./resources/[voice]/qb-radio
     ref: main
     src: https://github.com/qbcore-framework/qb-radio
+    
+    # MAPS
+  - action: download_github
+    dest: ./resources/[maps]/breze_benefactor
+    ref: main
+    src: https://github.com/qbcore-framework/breze_benefactor
+    
+  - action: download_github
+    dest: ./resources/[maps]/hospital_map
+    ref: main
+    src: https://github.com/qbcore-framework/hospital_map
     
   # Downloading QBCore resources
   - action: download_github
@@ -475,6 +492,16 @@ tasks:
     dest: ./resources/[qb]/qb-interior
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-menu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-menu
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-input
+    ref: main
+    src: https://github.com/qbcore-framework/qb-input
 
   # Clean up
   - action: remove_path
