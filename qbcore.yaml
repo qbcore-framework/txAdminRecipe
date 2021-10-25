@@ -1,7 +1,7 @@
 $engine: 3
 $onesync: on
 name: QBCore Framework
-version: 2.0.0
+version: 2.1.0
 author: JericoFx & Kakarot & Hamy
 description: An advanced FiveM RP framework including jobs, gangs, housing & more!
 
@@ -26,18 +26,18 @@ tasks:
     file: ./tmp/qbcore/qbcore.sql
     
 
-  # Downloading Standalone resources
+  # STANDALONE
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
 
   - action: download_file
-    path: ./tmp/files/oxmysql-1.5.1.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v1.5.1/oxmysql-v1.5.1.zip
+    path: ./tmp/files/oxmysql-1.7.0.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v1.7.0/oxmysql-v1.7.0.zip
   - action: unzip
     dest: ./resources/[standalone]
-    src: ./tmp/files/oxmysql-1.5.1.zip
+    src: ./tmp/files/oxmysql-1.7.0.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
@@ -49,7 +49,7 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
-    src: https://github.com/Bob74/bob74_ipl
+    src: https://github.com/qbcore-framework/bob74_ipl
     
   - action: download_github
     dest: ./resources/[standalone]/safecracker
@@ -82,10 +82,16 @@ tasks:
     src: https://github.com/qbcore-framework/dpemotes
 
   - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: master
+    src: https://github.com/qbcore-framework/PolyZone
+    
+  - action: download_github
     dest: ./resources/[standalone]/LegacyFuel
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
 
+    # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
     ref: b7acba6197797b8ddf54c14f2dde74d1ec295fa7
@@ -95,6 +101,17 @@ tasks:
     dest: ./resources/[voice]/qb-radio
     ref: main
     src: https://github.com/qbcore-framework/qb-radio
+    
+    # MAPS
+  - action: download_github
+    dest: ./resources/[maps]/breze_benefactor
+    ref: main
+    src: https://github.com/qbcore-framework/breze_benefactor
+    
+  - action: download_github
+    dest: ./resources/[maps]/hospital_map
+    ref: main
+    src: https://github.com/qbcore-framework/hospital_map
     
   # Downloading QBCore resources
   - action: download_github
@@ -144,11 +161,6 @@ tasks:
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-coke
-    ref: main
-    src: https://github.com/qbcore-framework/qb-coke
     
   - action: download_github
     dest: ./resources/[qb]/qb-prison
@@ -349,11 +361,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-afk
 
   - action: download_github
-    dest: ./resources/[qb]/qb-oxyrun
-    ref: main
-    src: https://github.com/qbcore-framework/qb-oxyrun
-
-  - action: download_github
     dest: ./resources/[qb]/qb-carwash
     ref: main
     src: https://github.com/qbcore-framework/qb-carwash
@@ -377,11 +384,6 @@ tasks:
     dest: ./resources/[qb]/qb-newsjob
     ref: main
     src: https://github.com/qbcore-framework/qb-newsjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-methlab
-    ref: main
-    src: https://github.com/qbcore-framework/qb-methlab
 
   - action: download_github
     dest: ./resources/[qb]/qb-jewelery
@@ -475,24 +477,17 @@ tasks:
     dest: ./resources/[qb]/qb-interior
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-menu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-menu
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-input
+    ref: main
+    src: https://github.com/qbcore-framework/qb-input
 
   # Clean up
   - action: remove_path
     path: ./tmp
-
-  - action: remove_path
-    path: ./resources/[cfx-default]/[test]
-  - action: remove_path
-    path: ./resources/[cfx-default]/[local]
-  - action: remove_path
-    path: ./resources/[cfx-default]/[gameplay]/chat-theme-gtao
-  - action: remove_path
-    path: ./resources/[cfx-default]/[gameplay]/[examples]
-  - action: remove_path
-    path: ./resources/[cfx-default]/[system]/sessionmanager-rdr3
-  - action: remove_path
-    path: ./resources/[cfx-default]/[system]/runcode
-  - action: remove_path
-    path: ./resources/[cfx-default]/[system]/rconlog
-  - action: remove_path
-    path: ./resources/[cfx-default]/[gamemodes]/[maps]
