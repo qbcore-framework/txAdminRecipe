@@ -94,7 +94,7 @@ tasks:
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
-    ref: ad8d632f4cbcdc78ac85b8052d45a66b340a7517
+    ref: 0a4dc5c1a7d6a59af3011907f979ee4c439d0490
     src: https://github.com/AvarianKnight/pma-voice
 
   - action: download_github
