@@ -55,6 +55,11 @@ tasks:
     dest: ./resources/[standalone]/safecracker
     ref: main
     src: https://github.com/qbcore-framework/safecracker
+    
+  - action: download_github
+    dest: ./resources/[standalone]/screenshot-basic
+    ref: master
+    src: https://github.com/citizenfx/screenshot-basic
 
   - action: download_github
     dest: ./resources/[standalone]/progressbar
