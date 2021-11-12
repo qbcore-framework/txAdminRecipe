@@ -404,11 +404,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-truckerjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-lawyerjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-lawyerjob
-
-  - action: download_github
     dest: ./resources/[qb]/qb-keyminigame
     ref: main
     src: https://github.com/qbcore-framework/qb-keyminigame
