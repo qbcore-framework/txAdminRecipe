@@ -379,6 +379,11 @@ tasks:
     dest: ./resources/[qb]/qb-taxijob
     ref: main
     src: https://github.com/qbcore-framework/qb-taxijob
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-busjob
+    ref: main
+    src: https://github.com/qbcore-framework/qb-busjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-newsjob
