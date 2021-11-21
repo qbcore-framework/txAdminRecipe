@@ -32,19 +32,15 @@ tasks:
     subpath: resources
     dest: ./resources/[cfx-default]
 
-  - action: download_file
-    path: ./tmp/files/oxmysql-1.8.0.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v1.8.0/oxmysql-v1.8.0.zip
-  - action: unzip
-    dest: ./resources/[standalone]
-    src: ./tmp/files/oxmysql-1.8.0.zip
+ - action: download_github
+  	dest: ./resources/[standalone]/oxmysql
+    ref: main
+    src: https://github.com/overextended/oxmysql
 
-  - action: download_file
-    path: ./tmp/menuv.zip
-    url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
-  - action: unzip
+  - action: download_github
+    ref: master
     dest: ./resources/[standalone]/menuv
-    src: ./tmp/menuv.zip
+    src: https://github.com/ThymonA/menuv
 
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
