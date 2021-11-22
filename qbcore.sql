@@ -278,15 +278,15 @@ CREATE TABLE IF NOT EXISTS `player_warns` (
 CREATE TABLE IF NOT EXISTS `bank_accounts` (
   `record_id` bigint(255) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(250) DEFAULT NULL,
-  `buisness` varchar(50) DEFAULT NULL,
-  `buisnessid` int(11) DEFAULT NULL,
+  `business` varchar(50) DEFAULT NULL,
+  `businessid` int(11) DEFAULT NULL,
   `gangid` varchar(50) DEFAULT NULL,
   `amount` bigint(255) NOT NULL DEFAULT 0,
-  `account_type` enum('Current','Savings','Buisness','Gang') NOT NULL DEFAULT 'Current',
+  `account_type` enum('Current','Savings','Business','Gang') NOT NULL DEFAULT 'Current',
   PRIMARY KEY (`record_id`),
   UNIQUE KEY `citizenid` (`citizenid`),
-  KEY `buisness` (`buisness`),
-  KEY `buisnessid` (`buisnessid`),
+  KEY `business` (`business`),
+  KEY `businessid` (`businessid`),
   KEY `gangid` (`gangid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
