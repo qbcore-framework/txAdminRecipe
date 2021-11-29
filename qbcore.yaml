@@ -444,11 +444,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-doorlock
 
   - action: download_github
-    dest: ./resources/[qb]/qb-crafting
-    ref: main
-    src: https://github.com/qbcore-framework/qb-crafting
-
-  - action: download_github
     dest: ./resources/[qb]/qb-garbagejob
     ref: main
     src: https://github.com/qbcore-framework/qb-garbagejob
