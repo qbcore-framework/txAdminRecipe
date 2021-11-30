@@ -140,6 +140,12 @@ CREATE TABLE IF NOT EXISTS `phone_invoices` (
   KEY `citizenid` (`citizenid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
+CREATE TABLE `phone_gallery` (
+   `citizenid` VARCHAR(255) NOT NULL , 
+   `image` VARCHAR(255) NOT NULL ,
+   `date` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
 CREATE TABLE IF NOT EXISTS `player_mails` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
