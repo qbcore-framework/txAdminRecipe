@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `phone_invoices` (
   KEY `citizenid` (`citizenid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
-CREATE TABLE `phone_gallery` (
+CREATE TABLE IF NOT EXISTS `phone_gallery` (
    `citizenid` VARCHAR(255) NOT NULL , 
    `image` VARCHAR(255) NOT NULL ,
    `date` timestamp NULL DEFAULT current_timestamp()
@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `phone_tweets` (
   `message` text DEFAULT NULL,
   `date` datetime DEFAULT current_timestamp(),
   `url` text DEFAULT NULL,
-  `picture` text DEFAULT './img/default.png',
+  `picture` varchar(512) DEFAULT './img/default.png',
   `tweetId` varchar(25) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
