@@ -336,11 +336,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-recyclejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-logs
-    ref: main
-    src: https://github.com/qbcore-framework/qb-logs
-
-  - action: download_github
     dest: ./resources/[qb]/qb-diving
     ref: main
     src: https://github.com/qbcore-framework/qb-diving
@@ -359,11 +354,6 @@ tasks:
     dest: ./resources/[qb]/qb-anticheat
     ref: main
     src: https://github.com/qbcore-framework/qb-anticheat
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-afk
-    ref: main
-    src: https://github.com/qbcore-framework/qb-afk
 
   - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
