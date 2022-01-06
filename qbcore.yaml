@@ -109,11 +109,6 @@ tasks:
     
     # MAPS
   - action: download_github
-    dest: ./resources/[defaultmaps]/breze_benefactor
-    ref: main
-    src: https://github.com/qbcore-framework/breze_benefactor
-    
-  - action: download_github
     dest: ./resources/[defaultmaps]/hospital_map
     ref: main
     src: https://github.com/qbcore-framework/hospital_map
