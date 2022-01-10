@@ -95,7 +95,12 @@ tasks:
     dest: ./resources/[standalone]/LegacyFuel
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
-
+    
+  - action: download_github
+    dest: ./resources/[standalone]/vstancer
+    ref: master
+    src: https://github.com/qbcore-framework/fivem-vstancer
+    
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
