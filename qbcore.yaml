@@ -33,11 +33,11 @@ tasks:
     dest: ./resources/[cfx-default]
 
   - action: download_file
-    path: ./tmp/files/oxmysql-1.8.7.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v1.8.7/oxmysql-v1.8.7.zip
+    path: ./tmp/files/oxmysql-1.9.3.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v1.9.3/oxmysql-v1.9.3.zip
   - action: unzip
     dest: ./resources/[standalone]
-    src: ./tmp/files/oxmysql-1.8.7.zip
+    src: ./tmp/files/oxmysql-1.9.3.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
