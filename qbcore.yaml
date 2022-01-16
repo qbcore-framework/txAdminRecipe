@@ -113,6 +113,11 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/hospital_map
     
+  - action: download_github
+    dest: ./resources/[defaultmaps]/prison_map
+    ref: main
+    src: https://github.com/qbcore-framework/prison_map
+    
   # Downloading QBCore resources
   - action: download_github
     dest: ./resources/[qb]/qb-core
