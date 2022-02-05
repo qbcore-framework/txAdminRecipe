@@ -132,27 +132,27 @@ tasks:
     
   # Downloading QBCore resources
   - action: download_github
-    dest: ./resources/[qb]/qb-core
+    dest: ./resources/[qb]/[core]/qb-core
     ref: main
     src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
-    dest: ./resources/[qb]/qb-gangmenu
+    dest: ./resources/[qb]/[base]/qb-gangmenu
     ref: main
     src: https://github.com/qbcore-framework/qb-gangmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-scoreboard
+    dest: ./resources/[qb]/[base]/qb-scoreboard
     ref: main
     src: https://github.com/qbcore-framework/qb-scoreboard
     
   - action: download_github
-    dest: ./resources/[qb]/qb-adminmenu
+    dest: ./resources/[qb]/[base]/qb-adminmenu
     ref: main
     src: https://github.com/qbcore-framework/qb-adminmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-multicharacter
+    dest: ./resources/[qb]/[base]/qb-multicharacter
     ref: main
     src: https://github.com/qbcore-framework/qb-multicharacter
 
@@ -160,87 +160,87 @@ tasks:
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-customs
+    dest: ./resources/[qb]/[vehiclesection]/qb-customs
     ref: main
     src: https://github.com/qbcore-framework/qb-customs
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vehiclesales
+    dest: ./resources/[qb]/[vehiclesection]/qb-vehiclesales
     ref: main
     src: https://github.com/qbcore-framework/qb-vehiclesales
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vehicleshop
+    dest: ./resources/[qb]/[vehiclesection]/qb-vehicleshop
     ref: main
     src: https://github.com/qbcore-framework/qb-vehicleshop
 
   - action: download_github
-    dest: ./resources/[qb]/qb-houserobbery
+    dest: ./resources/[qb]/[robbery]/qb-houserobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
     
   - action: download_github
-    dest: ./resources/[qb]/qb-prison
+    dest: ./resources/[qb]/[base]/qb-prison
     ref: main
     src: https://github.com/qbcore-framework/qb-prison
 
   - action: download_github
-    dest: ./resources/[qb]/qb-blackjack
+    dest: ./resources/[qb]/[other]/qb-blackjack
     ref: main
     src: https://github.com/qbcore-framework/qb-blackjack
 
   - action: download_github
-    dest: ./resources/[qb]/qb-atms
+    dest: ./resources/[qb]/[base]/qb-atms
     ref: main
     src: https://github.com/qbcore-framework/qb-atms
 
   - action: download_github
-    dest: ./resources/[qb]/qb-ifruitstore
+    dest: ./resources/[qb]/[robbery]/qb-ifruitstore
     ref: main
     src: https://github.com/qbcore-framework/qb-ifruitstore
     
   - action: download_github
-    dest: ./resources/[qb]/qb-hud
+    dest: ./resources/[qb]/[base]/qb-hud
     ref: main
     src: https://github.com/qbcore-framework/qb-hud
 
   - action: download_github
-    dest: ./resources/[qb]/qb-bossmenu
+    dest: ./resources/[qb]/[base]/qb-bossmenu
     ref: main
     src: https://github.com/qbcore-framework/qb-bossmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-weed
+    dest: ./resources/[qb]/[other]/qb-weed
     ref: main
     src: https://github.com/qbcore-framework/qb-weed
 
   - action: download_github
-    dest: ./resources/[qb]/qb-lapraces
+    dest: ./resources/[qb]/[base]/qb-lapraces
     ref: main
     src: https://github.com/qbcore-framework/qb-lapraces
 
   - action: download_github
-    dest: ./resources/[qb]/qb-inventory
+    dest: ./resources/[qb]/[base]/qb-inventory
     ref: main
     src: https://github.com/qbcore-framework/qb-inventory
 
   - action: download_github
-    dest: ./resources/[qb]/qb-houses
+    dest: ./resources/[qb]/[base]/qb-houses
     ref: main
     src: https://github.com/qbcore-framework/qb-houses
 
   - action: download_github
-    dest: ./resources/[qb]/qb-garages
+    dest: ./resources/[qb]/[vehiclesection]/qb-garages
     ref: main
     src: https://github.com/qbcore-framework/qb-garages
 
   - action: download_github
-    dest: ./resources/[qb]/qb-ambulancejob
+    dest: ./resources/[qb]/[corejobs]/qb-ambulancejob
     ref: main
     src: https://github.com/qbcore-framework/qb-ambulancejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vehiclefailure
+    dest: ./resources/[qb]/[vehiclesection]/qb-vehiclefailure
     ref: main
     src: https://github.com/qbcore-framework/qb-vehiclefailure
 
@@ -248,152 +248,152 @@ tasks:
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-radialmenu
+    dest: ./resources/[qb]/[base]/qb-radialmenu
     ref: main
     src: https://github.com/qbcore-framework/qb-radialmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-crypto
+    dest: ./resources/[qb]/[base]/qb-crypto
     ref: main
     src: https://github.com/qbcore-framework/qb-crypto
 
   - action: download_github
-    dest: ./resources/[qb]/qb-weathersync
+    dest: ./resources/[qb]/[base]/qb-weathersync
     ref: main
     src: https://github.com/qbcore-framework/qb-weathersync
 
   - action: download_github
-    dest: ./resources/[qb]/qb-policejob
+    dest: ./resources/[qb]/[corejobs]/qb-policejob
     ref: main
     src: https://github.com/qbcore-framework/qb-policejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-traphouse
+    dest: ./resources/[qb]/[other]/qb-traphouse
     ref: main
     src: https://github.com/qbcore-framework/qb-traphouse
 
   - action: download_github
-    dest: ./resources/[qb]/qb-apartments
+    dest: ./resources/[qb]/[base]/qb-apartments
     ref: main
     src: https://github.com/qbcore-framework/qb-apartments
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vehiclekeys
+    dest: ./resources/[qb]/[vehiclesection]/qb-vehiclekeys
     ref: main
     src: https://github.com/qbcore-framework/qb-vehiclekeys
 
   - action: download_github
-    dest: ./resources/[qb]/qb-mechanicjob
+    dest: ./resources/[qb]/[corejobs]/qb-mechanicjob
     ref: main
     src: https://github.com/qbcore-framework/qb-mechanicjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-phone
+    dest: ./resources/[qb]/[base]/qb-phone
     ref: main
     src: https://github.com/qbcore-framework/qb-phone
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vineyard
+    dest: ./resources/[qb]/[jobs]/qb-vineyard
     ref: main
     src: https://github.com/qbcore-framework/qb-vineyard
 
   - action: download_github
-    dest: ./resources/[qb]/qb-weapons
+    dest: ./resources/[qb]/[base]/qb-weapons
     ref: main
     src: https://github.com/qbcore-framework/qb-weapons
 
   - action: download_github
-    dest: ./resources/[qb]/qb-scrapyard
+    dest: ./resources/[qb]/[other]/qb-scrapyard
     ref: main
     src: https://github.com/qbcore-framework/qb-scrapyard
 
   - action: download_github
-    dest: ./resources/[qb]/qb-tunerchip
+    dest: ./resources/[qb]/[vehiclesection]/qb-tunerchip
     ref: main
     src: https://github.com/qbcore-framework/qb-tunerchip
 
   - action: download_github
-    dest: ./resources/[qb]/qb-towjob
+    dest: ./resources/[qb]/[jobs]/qb-towjob
     ref: main
     src: https://github.com/qbcore-framework/qb-towjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-streetraces
+    dest: ./resources/[qb]/[other]/qb-streetraces
     ref: main
     src: https://github.com/qbcore-framework/qb-streetraces
 
   - action: download_github
-    dest: ./resources/[qb]/qb-storerobbery
+    dest: ./resources/[qb]/[robbery]/qb-storerobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-storerobbery
 
   - action: download_github
-    dest: ./resources/[qb]/qb-spawn
+    dest: ./resources/[qb]/[base]/qb-spawn
     ref: main
     src: https://github.com/qbcore-framework/qb-spawn
 
   - action: download_github
-    dest: ./resources/[qb]/qb-skillbar
+    dest: ./resources/[qb]/[base]/qb-skillbar
     ref: main
     src: https://github.com/qbcore-framework/qb-skillbar
 
   - action: download_github
-    dest: ./resources/[qb]/qb-smallresources
+    dest: ./resources/[qb]/[base]/qb-smallresources
     ref: main
     src: https://github.com/qbcore-framework/qb-smallresources
 
   - action: download_github
-    dest: ./resources/[qb]/qb-recyclejob
+    dest: ./resources/[qb]/[jobs]/qb-recyclejob
     ref: main
     src: https://github.com/qbcore-framework/qb-recyclejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-diving
+    dest: ./resources/[qb]/[base]/qb-diving
     ref: main
     src: https://github.com/qbcore-framework/qb-diving
 
   - action: download_github
-    dest: ./resources/[qb]/qb-cityhall
+    dest: ./resources/[qb]/[base]/qb-cityhall
     ref: main
     src: https://github.com/qbcore-framework/qb-cityhall
 
   - action: download_github
-    dest: ./resources/[qb]/qb-casino
+    dest: ./resources/[qb]/[other]/qb-casino
     ref: main
     src: https://github.com/qbcore-framework/qb-casino
 
   - action: download_github
-    dest: ./resources/[qb]/qb-anticheat
+    dest: ./resources/[qb]/[base]/qb-anticheat
     ref: main
     src: https://github.com/qbcore-framework/qb-anticheat
 
   - action: download_github
-    dest: ./resources/[qb]/qb-truckrobbery
+    dest: ./resources/[qb]/[robbery]/qb-truckrobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-truckrobbery
 
   - action: download_github
-    dest: ./resources/[qb]/qb-pawnshop
+    dest: ./resources/[qb]/[other]/qb-pawnshop
     ref: main
     src: https://github.com/qbcore-framework/qb-pawnshop
 
   - action: download_github
-    dest: ./resources/[qb]/qb-taxijob
+    dest: ./resources/[qb]/[jobs]/qb-taxijob
     ref: main
     src: https://github.com/qbcore-framework/qb-taxijob
     
   - action: download_github
-    dest: ./resources/[qb]/qb-busjob
+    dest: ./resources/[qb]/[jobs]/qb-busjob
     ref: main
     src: https://github.com/qbcore-framework/qb-busjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-newsjob
+    dest: ./resources/[qb]/[jobs]/qb-newsjob
     ref: main
     src: https://github.com/qbcore-framework/qb-newsjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-jewelery
+    dest: ./resources/[qb]/[robbery]/qb-jewelery
     ref: main
     src: https://github.com/qbcore-framework/qb-jewelery
 
@@ -401,87 +401,87 @@ tasks:
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-bankrobbery
+    dest: ./resources/[qb]/[robbery]/qb-bankrobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-bankrobbery
 
   - action: download_github
-    dest: ./resources/[qb]/qb-truckerjob
+    dest: ./resources/[qb]/[jobs]/qb-truckerjob
     ref: main
     src: https://github.com/qbcore-framework/qb-truckerjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-keyminigame
+    dest: ./resources/[qb]/[other]/qb-keyminigame
     ref: main
     src: https://github.com/qbcore-framework/qb-keyminigame
 
   - action: download_github
-    dest: ./resources/[qb]/qb-fitbit
+    dest: ./resources/[qb]/[other]/qb-fitbit
     ref: main
     src: https://github.com/qbcore-framework/qb-fitbit
 
   - action: download_github
-    dest: ./resources/[qb]/qb-commandbinding
+    dest: ./resources/[qb]/[base]/qb-commandbinding
     ref: main
     src: https://github.com/qbcore-framework/qb-commandbinding
 
   - action: download_github
-    dest: ./resources/[qb]/qb-banking
+    dest: ./resources/[qb]/[base]/qb-banking
     ref: main
     src: https://github.com/qbcore-framework/qb-banking
 
   - action: download_github
-    dest: ./resources/[qb]/qb-clothing
+    dest: ./resources/[qb]/[base]/qb-clothing
     ref: main
     src: https://github.com/qbcore-framework/qb-clothing
 
   - action: download_github
-    dest: ./resources/[qb]/qb-hotdogjob
+    dest: ./resources/[qb]/[jobs]/qb-hotdogjob
     ref: main
     src: https://github.com/qbcore-framework/qb-hotdogjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-doorlock
+    dest: ./resources/[qb]/[base]/qb-doorlock
     ref: main
     src: https://github.com/qbcore-framework/qb-doorlock
 
   - action: download_github
-    dest: ./resources/[qb]/qb-garbagejob
+    dest: ./resources/[qb]/[jobs]/qb-garbagejob
     ref: main
     src: https://github.com/qbcore-framework/qb-garbagejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-drugs
+    dest: ./resources/[qb]/[other]/qb-drugs
     ref: main
     src: https://github.com/qbcore-framework/qb-drugs
 
   - action: download_github
-    dest: ./resources/[qb]/qb-builderjob
+    dest: ./resources/[qb]/[jobs]/qb-builderjob
     ref: main
     src: https://github.com/qbcore-framework/qb-builderjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-shops
+    dest: ./resources/[qb]/[base]/qb-shops
     ref: main
     src: https://github.com/qbcore-framework/qb-shops
 
   - action: download_github
-    dest: ./resources/[qb]/qb-lockpick
+    dest: ./resources/[qb]/[base]/qb-lockpick
     ref: main
     src: https://github.com/qbcore-framework/qb-lockpick
 
   - action: download_github
-    dest: ./resources/[qb]/qb-interior
+    dest: ./resources/[qb]/[base]/qb-interior
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
     
   - action: download_github
-    dest: ./resources/[qb]/qb-menu
+    dest: ./resources/[qb]/[base]/qb-menu
     ref: main
     src: https://github.com/qbcore-framework/qb-menu
     
   - action: download_github
-    dest: ./resources/[qb]/qb-input
+    dest: ./resources/[qb]/[base]/qb-input
     ref: main
     src: https://github.com/qbcore-framework/qb-input
 
