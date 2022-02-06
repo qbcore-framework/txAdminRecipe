@@ -126,7 +126,7 @@ tasks:
     src: https://github.com/qbcore-framework/dealer_map
     
   - action: download_github
-    dest: ./resources/[defaultmaps]/prison_map
+    dest: ./resources/[defaultmaps]/[prison_map]
     ref: main
     src: https://github.com/qbcore-framework/prison_map
     
