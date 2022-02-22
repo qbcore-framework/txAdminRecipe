@@ -137,11 +137,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
-    dest: ./resources/[qb]/qb-gangmenu
-    ref: main
-    src: https://github.com/qbcore-framework/qb-gangmenu
-
-  - action: download_github
     dest: ./resources/[qb]/qb-scoreboard
     ref: main
     src: https://github.com/qbcore-framework/qb-scoreboard
@@ -205,9 +200,9 @@ tasks:
     src: https://github.com/qbcore-framework/qb-hud
 
   - action: download_github
-    dest: ./resources/[qb]/qb-bossmenu
+    dest: ./resources/[qb]/qb-management
     ref: main
-    src: https://github.com/qbcore-framework/qb-bossmenu
+    src: https://github.com/qbcore-framework/qb-management
 
   - action: download_github
     dest: ./resources/[qb]/qb-weed
