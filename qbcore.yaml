@@ -1,4 +1,5 @@
 $engine: 3
+$minFxVersion: 5104
 $onesync: on
 name: QBCore Framework
 version: 2.2.0
