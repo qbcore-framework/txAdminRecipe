@@ -193,11 +193,6 @@ tasks:
     dest: ./resources/[qb]/qb-atms
     ref: main
     src: https://github.com/qbcore-framework/qb-atms
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-ifruitstore
-    ref: main
-    src: https://github.com/qbcore-framework/qb-ifruitstore
     
   - action: download_github
     dest: ./resources/[qb]/qb-hud
