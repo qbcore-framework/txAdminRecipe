@@ -155,6 +155,11 @@ tasks:
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
     src: https://github.com/qbcore-framework/qb-multicharacter
+    
+  - action: download_github
+    dest: ./resources/[qb]/qb-target
+    ref: main
+    src: https://github.com/BerkieBb/qb-target
 
   - action: waste_time # prevent github throttling
     seconds: 10
