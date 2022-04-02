@@ -96,13 +96,6 @@ tasks:
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
     
-  - action: download_file
-    path: ./tmp/files/vstancer-v1.4.0.zip
-    url: https://github.com/carmineos/fivem-vstancer/releases/download/v1.4/vstancer-v1.4.0.zip
-  - action: unzip
-    dest: ./resources/[standalone]
-    src: ./tmp/files/vstancer-v1.4.0.zip
-    
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
