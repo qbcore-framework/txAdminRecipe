@@ -462,6 +462,11 @@ tasks:
     dest: ./resources/[qb]/qb-loading
     ref: main
     src: https://github.com/qbcore-framework/qb-loading
+    
+    action: download_github
+    dest: ./resources/[qb]/qb-target
+    ref: main
+    src: https://github.com/BerkieBb/qb-target
 
   # Clean up
   - action: remove_path
