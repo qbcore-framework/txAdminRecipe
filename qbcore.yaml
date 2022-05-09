@@ -463,7 +463,7 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-loading
     
-    action: download_github
+  - action: download_github
     dest: ./resources/[qb]/qb-target
     ref: main
     src: https://github.com/qbcore-framework/qb-target
