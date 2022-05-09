@@ -466,7 +466,7 @@ tasks:
     action: download_github
     dest: ./resources/[qb]/qb-target
     ref: main
-    src: https://github.com/BerkieBb/qb-target
+    src: https://github.com/qbcore-framework/qb-target
 
   # Clean up
   - action: remove_path
