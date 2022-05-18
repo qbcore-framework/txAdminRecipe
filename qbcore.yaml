@@ -147,7 +147,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-target
     ref: main
-    src: https://github.com/BerkieBb/qb-target
+    src: https://github.com/qbcore-framework/qb-target
 
   - action: waste_time # prevent github throttling
     seconds: 10
