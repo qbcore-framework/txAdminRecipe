@@ -341,11 +341,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-cityhall
 
   - action: download_github
-    dest: ./resources/[qb]/qb-anticheat
-    ref: main
-    src: https://github.com/qbcore-framework/qb-anticheat
-
-  - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-truckrobbery
