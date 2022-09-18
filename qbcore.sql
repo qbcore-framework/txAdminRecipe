@@ -545,3 +545,13 @@ COLLATE='utf8mb4_general_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=31
 ;
+
+CREATE TABLE `npwd_crypto_transactions` (
+  `id` int auto_increment primary key,
+  `identifier` VARCHAR(20) NULL,
+  `type`       VARCHAR(20) NULL,
+  `amount`     FLOAT NULL,
+  `worth`      FLOAT NULL,
+  `sentTo`     VARCHAR(20) NULL,
+  `createdAt`  TIMESTAMP DEFAULT current_timestamp() NULL
+);
