@@ -24,7 +24,7 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
-    
+
 
   # STANDALONE
   - action: download_github
@@ -50,12 +50,12 @@ tasks:
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
     src: https://github.com/qbcore-framework/bob74_ipl
-    
+
   - action: download_github
     dest: ./resources/[standalone]/safecracker
     ref: main
     src: https://github.com/qbcore-framework/safecracker
-    
+
   - action: download_github
     dest: ./resources/[standalone]/screenshot-basic
     ref: master
@@ -70,7 +70,7 @@ tasks:
     dest: ./resources/[standalone]/interact-sound
     ref: master
     src: https://github.com/qbcore-framework/interact-sound
-    
+
   - action: download_github
     dest: ./resources/[standalone]/mhacking
     ref: main
@@ -90,12 +90,12 @@ tasks:
     dest: ./resources/[standalone]/PolyZone
     ref: master
     src: https://github.com/qbcore-framework/PolyZone
-    
+
   - action: download_github
     dest: ./resources/[standalone]/LegacyFuel
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
-    
+
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
@@ -106,23 +106,23 @@ tasks:
     dest: ./resources/[voice]/qb-radio
     ref: main
     src: https://github.com/qbcore-framework/qb-radio
-    
+
     # MAPS
   - action: download_github
     dest: ./resources/[defaultmaps]/hospital_map
     ref: main
     src: https://github.com/qbcore-framework/hospital_map
-    
+
   - action: download_github
     dest: ./resources/[defaultmaps]/dealer_map
     ref: main
     src: https://github.com/qbcore-framework/dealer_map
-    
+
   - action: download_github
     dest: ./resources/[defaultmaps]/[prison_map]
     ref: main
     src: https://github.com/qbcore-framework/prison_map
-    
+
   # Downloading QBCore resources
   - action: download_github
     dest: ./resources/[qb]/qb-core
@@ -133,7 +133,7 @@ tasks:
     dest: ./resources/[qb]/qb-scoreboard
     ref: main
     src: https://github.com/qbcore-framework/qb-scoreboard
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-adminmenu
     ref: main
@@ -143,7 +143,7 @@ tasks:
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
     src: https://github.com/qbcore-framework/qb-multicharacter
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-target
     ref: main
@@ -171,7 +171,7 @@ tasks:
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-prison
     ref: main
@@ -181,7 +181,7 @@ tasks:
     dest: ./resources/[qb]/qb-atms
     ref: main
     src: https://github.com/qbcore-framework/qb-atms
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-hud
     ref: main
@@ -354,7 +354,7 @@ tasks:
     dest: ./resources/[qb]/qb-taxijob
     ref: main
     src: https://github.com/qbcore-framework/qb-taxijob
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-busjob
     ref: main
@@ -442,17 +442,17 @@ tasks:
     dest: ./resources/[qb]/qb-interior
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-menu
     ref: main
     src: https://github.com/qbcore-framework/qb-menu
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-input
     ref: main
     src: https://github.com/qbcore-framework/qb-input
-    
+
   - action: download_github
     dest: ./resources/[qb]/qb-loading
     ref: main
