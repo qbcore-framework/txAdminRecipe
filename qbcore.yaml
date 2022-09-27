@@ -143,11 +143,11 @@ tasks:
     src: ./tmp/files/npwd_qb_garage.zip
 
   - action: download_file
-    path: ./tmp/files/npwd_qb_services.zip
-    url: https://github.com/npwd-community/npwd_qb_services/releases/download/1.0.5/npwd_qb_services.zip
+    path: ./tmp/files/npwd_services.zip
+    url: https://github.com/npwd-community/npwd_services/releases/download/1.0.5/npwd_services.zip
   - action: unzip
     dest: ./resources/[standalone]
-    src: ./tmp/files/npwd_qb_services.zip
+    src: ./tmp/files/npwd_services.zip
 
   - action: download_file
     path: ./tmp/files/npwd_qb_racing.zip
