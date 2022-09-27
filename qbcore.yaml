@@ -137,14 +137,14 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/npwd_qb_garage.zip
-    url: https://github.com/npwd-community/npwd_qb_garage/releases/download/1.0.5/npwd_qb_garage.zip
+    url: https://github.com/npwd-community/npwd_qb_garage/releases/download/1.0.6/npwd_qb_garage.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/npwd_qb_garage.zip
 
   - action: download_file
     path: ./tmp/files/npwd_qb_services.zip
-    url: https://github.com/npwd-community/npwd_qb_services/releases/download/1.0.4/npwd_qb_services.zip
+    url: https://github.com/npwd-community/npwd_qb_services/releases/download/1.0.5/npwd_qb_services.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/npwd_qb_services.zip
@@ -165,7 +165,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/npwd_qb_mail.zip
-    url: https://github.com/npwd-community/npwd_qb_mail/releases/download/1.0.3/npwd_qb_mail.zip
+    url: https://github.com/npwd-community/npwd_qb_mail/releases/download/1.0.5/npwd_qb_mail.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/npwd_qb_mail.zip
