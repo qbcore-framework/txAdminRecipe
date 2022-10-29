@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `phone_tweets` (
   `firstName` varchar(25) DEFAULT NULL,
   `lastName` varchar(25) DEFAULT NULL,
   `message` text DEFAULT NULL,
-  `date` datetime DEFAULT current_timestamp(),
+  `date` timestamp NULL DEFAULT current_timestamp(),
   `url` text DEFAULT NULL,
   `picture` varchar(512) DEFAULT './img/default.png',
   `tweetId` varchar(25) NOT NULL,
