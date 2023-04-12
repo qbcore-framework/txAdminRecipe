@@ -1,14 +1,14 @@
 $engine: 3
 $onesync: on
-name: QBCore Framework
-version: 2.2.4
-author: JericoFx & Kakarot & Hamy
-description: An advanced FiveM RP framework including jobs, gangs, housing & more!
+name: Eclipse Server
+version: 3.1.0
+author: Brandon
+description: Eclipse Main Server
 
 tasks:
   #  Download Base Files
   - action: download_github
-    src: https://github.com/qbcore-framework/txAdminRecipe
+    src: https://github.com/EclipseRPServer/txAdminRecipe
     ref: main
     dest: ./tmp/qbcore
 
@@ -24,20 +24,34 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
-
+    
 
   # STANDALONE
   - action: download_github
-    src: https://github.com/citizenfx/cfx-server-data
+    src: https://github.com/EclipseRPServer/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v2.5.4/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.6.0/oxmysql.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
+
+  - action: download_file
+    path: ./tmp/files/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/download/v3.1.4/ox_lib.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/ox_lib.zip
+
+  - action: download_file
+    path: ./tmp/files/illenium-appearance.zip
+    url: https://github.com/EclipseRPServer/illenium-appearance/releases/download/v5.0.3/illenium-appearance.zip
+  - action: unzip
+    dest: ./resources/[qb]
+    src: ./tmp/files/illenium-appearance.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
@@ -49,13 +63,13 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
-    src: https://github.com/qbcore-framework/bob74_ipl
-
+    src: https://github.com/EclipseRPServer/bob74_ipl
+    
   - action: download_github
     dest: ./resources/[standalone]/safecracker
     ref: main
-    src: https://github.com/qbcore-framework/safecracker
-
+    src: https://github.com/EclipseRPServer/safecracker
+    
   - action: download_github
     dest: ./resources/[standalone]/screenshot-basic
     ref: master
@@ -64,38 +78,38 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/progressbar
     ref: main
-    src: https://github.com/qbcore-framework/progressbar
+    src: https://github.com/EclipseRPServer/progressbar
 
   - action: download_github
     dest: ./resources/[standalone]/interact-sound
     ref: master
-    src: https://github.com/qbcore-framework/interact-sound
-
+    src: https://github.com/EclipseRPServer/interact-sound
+    
   - action: download_github
     dest: ./resources/[standalone]/mhacking
     ref: main
-    src: https://github.com/qbcore-framework/mhacking
+    src: https://github.com/EclipseRPServer/mhacking
 
   - action: download_github
     dest: ./resources/[standalone]/connectqueue
     ref: master
-    src: https://github.com/qbcore-framework/connectqueue
+    src: https://github.com/EclipseRPServer/connectqueue
 
   - action: download_github
     dest: ./resources/[standalone]/dpemotes
     ref: master
-    src: https://github.com/qbcore-framework/dpemotes
+    src: https://github.com/EclipseRPServer/dpemotes
 
   - action: download_github
     dest: ./resources/[standalone]/PolyZone
     ref: master
-    src: https://github.com/qbcore-framework/PolyZone
-
+    src: https://github.com/mkafrin/PolyZone
+    
   - action: download_github
-    dest: ./resources/[standalone]/LegacyFuel
-    ref: master
-    src: https://github.com/qbcore-framework/LegacyFuel
-
+    dest: ./resources/[standalone]/ps-fuel
+    ref: main
+    src: https://github.com/EclipseRPServer/cdn-fuel
+    
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
@@ -105,122 +119,91 @@ tasks:
   - action: download_github
     dest: ./resources/[voice]/qb-radio
     ref: main
-    src: https://github.com/qbcore-framework/qb-radio
-
-    # MAPS
-  - action: download_github
-    dest: ./resources/[defaultmaps]/hospital_map
-    ref: main
-    src: https://github.com/qbcore-framework/hospital_map
-
-  - action: download_github
-    dest: ./resources/[defaultmaps]/dealer_map
-    ref: main
-    src: https://github.com/qbcore-framework/dealer_map
-
-  - action: download_github
-    dest: ./resources/[defaultmaps]/[prison_map]
-    ref: main
-    src: https://github.com/qbcore-framework/prison_map
-
+    src: https://github.com/EclipseRPServer/qb-radio-v2
+    
   # Downloading QBCore resources
   - action: download_github
     dest: ./resources/[qb]/qb-core
     ref: main
-    src: https://github.com/qbcore-framework/qb-core
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-scoreboard
-    ref: main
-    src: https://github.com/qbcore-framework/qb-scoreboard
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-adminmenu
-    ref: main
-    src: https://github.com/qbcore-framework/qb-adminmenu
+    src: https://github.com/EclipseRPServer/qb-core
 
   - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
-    src: https://github.com/qbcore-framework/qb-multicharacter
-
+    src: https://github.com/EclipseRPServer/qb-multicharacter
+    
   - action: download_github
     dest: ./resources/[qb]/qb-target
     ref: main
-    src: https://github.com/qbcore-framework/qb-target
+    src: https://github.com/EclipseRPServer/qb-target
 
   - action: waste_time # prevent github throttling
     seconds: 10
 
   - action: download_github
+    dest: ./resources/[qb]/qb-customs
+    ref: main
+    src: https://github.com/EclipseRPServer/qb-customs
+
+  - action: download_github
     dest: ./resources/[qb]/qb-vehiclesales
     ref: main
-    src: https://github.com/qbcore-framework/qb-vehiclesales
+    src: https://github.com/EclipseRPServer/qb-vehiclesales
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehicleshop
     ref: main
-    src: https://github.com/qbcore-framework/qb-vehicleshop
+    src: https://github.com/EclipseRPServer/qb-vehicleshop
 
   - action: download_github
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
-    src: https://github.com/qbcore-framework/qb-houserobbery
-
+    src: https://github.com/EclipseRPServer/qb-houserobbery
+    
   - action: download_github
     dest: ./resources/[qb]/qb-prison
     ref: main
-    src: https://github.com/qbcore-framework/qb-prison
-
+    src: https://github.com/EclipseRPServer/qb-prison
+    
   - action: download_github
-    dest: ./resources/[qb]/qb-atms
+    dest: ./resources/[qb]/ps-hud
     ref: main
-    src: https://github.com/qbcore-framework/qb-atms
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-hud
-    ref: main
-    src: https://github.com/qbcore-framework/qb-hud
+    src: https://github.com/EclipseRPServer/ps-hud
 
   - action: download_github
     dest: ./resources/[qb]/qb-management
     ref: main
-    src: https://github.com/qbcore-framework/qb-management
+    src: https://github.com/EclipseRPServer/qb-management
 
   - action: download_github
-    dest: ./resources/[qb]/qb-weed
+    dest: ./resources/[qb]/qb-spawn
     ref: main
-    src: https://github.com/qbcore-framework/qb-weed
+    src: https://github.com/EclipseRPServer/qb-spawn
 
   - action: download_github
     dest: ./resources/[qb]/qb-lapraces
     ref: main
-    src: https://github.com/qbcore-framework/qb-lapraces
+    src: https://github.com/EclipseRPServer/qb-lapraces
 
   - action: download_github
     dest: ./resources/[qb]/qb-inventory
-    ref: main
-    src: https://github.com/qbcore-framework/qb-inventory
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-houses
-    ref: main
-    src: https://github.com/qbcore-framework/qb-houses
+    ref: master
+    src: https://github.com/EclipseRPServer/qb-inventory-decay
 
   - action: download_github
     dest: ./resources/[qb]/qb-garages
     ref: main
-    src: https://github.com/qbcore-framework/qb-garages
+    src: https://github.com/EclipseRPServer/qb-garages-1
 
   - action: download_github
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
-    src: https://github.com/qbcore-framework/qb-ambulancejob
+    src: https://github.com/EclipseRPServer/qb-ambulancejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclefailure
     ref: main
-    src: https://github.com/qbcore-framework/qb-vehiclefailure
+    src: https://github.com/EclipseRPServer/qb-vehiclefailure
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -228,142 +211,117 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-radialmenu
     ref: main
-    src: https://github.com/qbcore-framework/qb-radialmenu
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-crypto
-    ref: main
-    src: https://github.com/qbcore-framework/qb-crypto
+    src: https://github.com/EclipseRPServer/qb-radialmenuv2
 
   - action: download_github
     dest: ./resources/[qb]/qb-weathersync
     ref: main
-    src: https://github.com/qbcore-framework/qb-weathersync
+    src: https://github.com/EclipseRPServer/qb-weathersync
 
   - action: download_github
     dest: ./resources/[qb]/qb-policejob
     ref: main
-    src: https://github.com/qbcore-framework/qb-policejob
+    src: https://github.com/EclipseRPServer/qb-policejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-traphouse
     ref: main
-    src: https://github.com/qbcore-framework/qb-traphouse
+    src: https://github.com/EclipseRPServer/qb-traphouse
 
   - action: download_github
     dest: ./resources/[qb]/qb-apartments
     ref: main
-    src: https://github.com/qbcore-framework/qb-apartments
+    src: https://github.com/EclipseRPServer/qb-apartments
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclekeys
     ref: main
-    src: https://github.com/qbcore-framework/qb-vehiclekeys
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-mechanicjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-mechanicjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-phone
-    ref: main
-    src: https://github.com/qbcore-framework/qb-phone
+    src: https://github.com/EclipseRPServer/qb-vehiclekeys
 
   - action: download_github
     dest: ./resources/[qb]/qb-vineyard
     ref: main
-    src: https://github.com/qbcore-framework/qb-vineyard
+    src: https://github.com/EclipseRPServer/qb-vineyard
 
   - action: download_github
     dest: ./resources/[qb]/qb-weapons
     ref: main
-    src: https://github.com/qbcore-framework/qb-weapons
+    src: https://github.com/EclipseRPServer/qb-weapons
 
   - action: download_github
     dest: ./resources/[qb]/qb-scrapyard
     ref: main
-    src: https://github.com/qbcore-framework/qb-scrapyard
+    src: https://github.com/EclipseRPServer/qb-scrapyard
 
   - action: download_github
     dest: ./resources/[qb]/qb-tunerchip
     ref: main
-    src: https://github.com/qbcore-framework/qb-tunerchip
+    src: https://github.com/EclipseRPServer/qb-tunerchip
 
   - action: download_github
     dest: ./resources/[qb]/qb-towjob
     ref: main
-    src: https://github.com/qbcore-framework/qb-towjob
+    src: https://github.com/EclipseRPServer/qb-towjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-streetraces
     ref: main
-    src: https://github.com/qbcore-framework/qb-streetraces
+    src: https://github.com/EclipseRPServer/qb-streetraces
 
   - action: download_github
     dest: ./resources/[qb]/qb-storerobbery
     ref: main
-    src: https://github.com/qbcore-framework/qb-storerobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-spawn
-    ref: main
-    src: https://github.com/qbcore-framework/qb-spawn
+    src: https://github.com/EclipseRPServer/qb-storerobbery
 
   - action: download_github
     dest: ./resources/[qb]/qb-skillbar
     ref: main
-    src: https://github.com/qbcore-framework/qb-skillbar
+    src: https://github.com/EclipseRPServer/qb-skillbar
 
   - action: download_github
     dest: ./resources/[qb]/qb-smallresources
     ref: main
-    src: https://github.com/qbcore-framework/qb-smallresources
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-recyclejob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-recyclejob
+    src: https://github.com/EclipseRPServer/qb-smallresources
 
   - action: download_github
     dest: ./resources/[qb]/qb-diving
     ref: main
-    src: https://github.com/qbcore-framework/qb-diving
+    src: https://github.com/EclipseRPServer/qb-diving
 
   - action: download_github
     dest: ./resources/[qb]/qb-cityhall
     ref: main
-    src: https://github.com/qbcore-framework/qb-cityhall
+    src: https://github.com/EclipseRPServer/qb-cityhall
 
   - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
     ref: main
-    src: https://github.com/qbcore-framework/qb-truckrobbery
+    src: https://github.com/EclipseRPServer/qb-truckrobbery
 
   - action: download_github
     dest: ./resources/[qb]/qb-pawnshop
     ref: main
-    src: https://github.com/qbcore-framework/qb-pawnshop
+    src: https://github.com/EclipseRPServer/qb-pawnshop
 
   - action: download_github
     dest: ./resources/[qb]/qb-taxijob
     ref: main
-    src: https://github.com/qbcore-framework/qb-taxijob
-
+    src: https://github.com/EclipseRPServer/qb-taxijob
+    
   - action: download_github
     dest: ./resources/[qb]/qb-busjob
     ref: main
-    src: https://github.com/qbcore-framework/qb-busjob
+    src: https://github.com/EclipseRPServer/qb-busjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-newsjob
     ref: main
-    src: https://github.com/qbcore-framework/qb-newsjob
+    src: https://github.com/EclipseRPServer/qb-newsjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-jewelery
     ref: main
-    src: https://github.com/qbcore-framework/qb-jewelery
+    src: https://github.com/EclipseRPServer/qb-jewelery
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -371,87 +329,201 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-bankrobbery
     ref: main
-    src: https://github.com/qbcore-framework/qb-bankrobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-truckerjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-truckerjob
+    src: https://github.com/EclipseRPServer/qb-bankrobbery
 
   - action: download_github
     dest: ./resources/[qb]/qb-keyminigame
     ref: main
-    src: https://github.com/qbcore-framework/qb-keyminigame
+    src: https://github.com/EclipseRPServer/qb-keyminigame
 
   - action: download_github
     dest: ./resources/[qb]/qb-fitbit
     ref: main
-    src: https://github.com/qbcore-framework/qb-fitbit
+    src: https://github.com/EclipseRPServer/qb-fitbit
 
   - action: download_github
     dest: ./resources/[qb]/qb-commandbinding
     ref: main
-    src: https://github.com/qbcore-framework/qb-commandbinding
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-banking
-    ref: main
-    src: https://github.com/qbcore-framework/qb-banking
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-clothing
-    ref: main
-    src: https://github.com/qbcore-framework/qb-clothing
+    src: https://github.com/EclipseRPServer/qb-commandbinding
 
   - action: download_github
     dest: ./resources/[qb]/qb-hotdogjob
     ref: main
-    src: https://github.com/qbcore-framework/qb-hotdogjob
+    src: https://github.com/EclipseRPServer/qb-hotdogjob
 
   - action: download_github
     dest: ./resources/[qb]/qb-doorlock
     ref: main
-    src: https://github.com/qbcore-framework/qb-doorlock
+    src: https://github.com/EclipseRPServer/qb-doorlock
 
   - action: download_github
     dest: ./resources/[qb]/qb-garbagejob
     ref: main
-    src: https://github.com/qbcore-framework/qb-garbagejob
+    src: https://github.com/EclipseRPServer/qb-garbagejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-drugs
     ref: main
-    src: https://github.com/qbcore-framework/qb-drugs
+    src: https://github.com/EclipseRPServer/qb-drugs
 
   - action: download_github
     dest: ./resources/[qb]/qb-shops
     ref: main
-    src: https://github.com/qbcore-framework/qb-shops
+    src: https://github.com/EclipseRPServer/qb-shops
 
   - action: download_github
     dest: ./resources/[qb]/qb-lockpick
     ref: main
-    src: https://github.com/qbcore-framework/qb-lockpick
+    src: https://github.com/EclipseRPServer/qb-lockpick
 
   - action: download_github
     dest: ./resources/[qb]/qb-interior
     ref: main
-    src: https://github.com/qbcore-framework/qb-interior
-
+    src: https://github.com/EclipseRPServer/qb-interior
+    
   - action: download_github
     dest: ./resources/[qb]/qb-menu
     ref: main
-    src: https://github.com/qbcore-framework/qb-menu
-
+    src: https://github.com/EclipseRPServer/qb-menu
+    
   - action: download_github
     dest: ./resources/[qb]/qb-input
     ref: main
-    src: https://github.com/qbcore-framework/qb-input
+    src: https://github.com/EclipseRPServer/qb-input
+    
+  - action: download_github
+    dest: ./resources/[qb]/nc-loadingscreens
+    ref: main
+    src: https://github.com/EclipseRPServer/nc-loadingscreens
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-loading
+    dest: ./resources/[qb]/jim-recycle
     ref: main
-    src: https://github.com/qbcore-framework/qb-loading
+    src: https://github.com/EclipseRPServer/jim-recycle
+
+  - action: download_github
+    dest: ./resources/[qb]/jim-mining
+    ref: main
+    src: https://github.com/EclipseRPServer/jim-mining
+  
+  - action: download_github
+    dest: ./resources/[EclipseAddons]/[Addons]
+    ref: main 
+    src: https://github.com/EclipseRPServer/Eclipse-Addons
+
+  - action: download_github
+    dest: ./resources/[qb]/kevin-pickbikes
+    ref: main 
+    src: https://github.com/EclipseRPServer/kevin-pickbikes
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-mdt
+    ref: main 
+    src: https://github.com/EclipseRPServer/ps-mdt
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-dispatch
+    ref: main 
+    src: https://github.com/EclipseRPServer/ps-dispatch
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-ui
+    ref: main 
+    src: https://github.com/Project-Sloth/ps-ui
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-buffs
+    ref: main 
+    src: https://github.com/Project-Sloth/ps-buffs
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-objectspawner
+    ref: main 
+    src: https://github.com/EclipseRPServer/ps-objectspawner
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/wk_wars2x
+    ref: master 
+    src: https://github.com/WolfKnight98/wk_wars2x
+  
+  - action: download_github
+    dest: ./resources/[qb]/qb-scenes
+    ref: master 
+    src: https://github.com/ItsANoBrainer/qb-scenes
+
+  - action: download_github
+    dest: ./resources/[qb]/gb-cigarettes
+    ref: main 
+    src: https://github.com/EclipseRPServer/gb-cigarettes
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-extra
+    ref: main 
+    src: https://github.com/EclipseRPServer/qb-extras
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-donator
+    ref: main 
+    src: https://github.com/Project-Sloth/ps-donator
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-microphone
+    ref: main 
+    src: https://github.com/EclipseRPServer/ps-microphone
+  
+  - action: download_github
+    dest: ./resources/[qb]/ps-zones
+    ref: main 
+    src: https://github.com/Project-Sloth/ps-zones
+
+  - action: download_github
+    dest: ./resources/[qb]/dog-bodycam
+    ref: main 
+    src: https://github.com/EclipseRPServer/dog-bodycam
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-idcard
+    ref: main 
+    src: https://github.com/EclipseRPServer/qb-idcard
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/rs-frontdesk
+    ref: main 
+    src: https://github.com/EclipseRPServer/rs-frontdesk
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-teleport
+    ref: master 
+    src: https://github.com/EclipseRPServer/qb-teleport
+
+  - action: download_github
+    dest: ./resources/[qb]/nc-headbag
+    ref: main 
+    src: https://github.com/NaorNC/nc-headbag
+
+  - action: download_github
+    dest: ./resources/[qb]/ps-multijob
+    ref: main 
+    src: https://github.com/EclipseRPServer/ps-multijob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-whiteboard
+    ref: main 
+    src: https://github.com/theMani-kh/qb-whiteboard
+
+  - action: download_github
+    dest: ./resources/[qb]/an-pursuitmode
+    ref: main 
+    src: https://github.com/EclipseRPServer/an-pursuitmode
 
   # Clean up
   - action: remove_path
