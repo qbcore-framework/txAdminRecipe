@@ -163,7 +163,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-prison
     ref: main
-    src: https://github.com/EclipseRPServer/qb-prison
+    src: https://github.com/EclipseRPServer/qb-prison-old
     
   - action: download_github
     dest: ./resources/[qb]/ps-hud
