@@ -392,9 +392,9 @@ tasks:
     src: https://github.com/EclipseRPServer/qb-input
     
   - action: download_github
-    dest: ./resources/[qb]/nc-loadingscreens
+    dest: ./resources/[qb]/nc-loadingscreen
     ref: main
-    src: https://github.com/EclipseRPServer/nc-loadingscreens
+    src: https://github.com/EclipseRPServer/nc-loadingscreenv3
 
   - action: waste_time # prevent github throttling
     seconds: 10
