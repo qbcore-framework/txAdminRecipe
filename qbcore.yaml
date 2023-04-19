@@ -154,11 +154,6 @@ tasks:
     dest: ./resources/[qb]/qb-vehicleshop
     ref: main
     src: https://github.com/EclipseRPServer/qb-vehicleshop
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-houserobbery
-    ref: main
-    src: https://github.com/EclipseRPServer/qb-houserobbery
     
   - action: download_github
     dest: ./resources/[qb]/qb-prison
