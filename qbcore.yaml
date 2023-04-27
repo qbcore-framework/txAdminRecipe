@@ -25,7 +25,6 @@ tasks:
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
 
-
   # STANDALONE
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
@@ -96,6 +95,9 @@ tasks:
     ref: master
     src: https://github.com/qbcore-framework/LegacyFuel
 
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
@@ -123,6 +125,9 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/prison_map
 
+  - action: waste_time # prevent github throttling
+    seconds: 5
+
   # Downloading QBCore resources
   - action: download_github
     dest: ./resources/[qb]/qb-core
@@ -149,9 +154,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-target
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclesales
     ref: main
@@ -166,6 +168,9 @@ tasks:
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-prison
@@ -274,6 +279,9 @@ tasks:
     dest: ./resources/[qb]/qb-vineyard
     ref: main
     src: https://github.com/qbcore-framework/qb-vineyard
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-weapons
@@ -442,6 +450,9 @@ tasks:
     dest: ./resources/[qb]/qb-menu
     ref: main
     src: https://github.com/qbcore-framework/qb-menu
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-input
