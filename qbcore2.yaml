@@ -54,11 +54,11 @@ tasks:
     src: ./tmp/files/illenium-appearance.zip
 
   - action: download_file
-    path: ./tmp/files/qb-target
+    path: ./tmp/qb-target
     url: https://github.com/EclipseRPServer/qb-target/releases/download/5.4.0/qb-target.zip
   - action: unzip
     dest: ./resources/[qb]
-    src: ./tmp/files/qb-target.zip
+    src: ./tmp/qb-target.zip
 
   - action: download_file
     path: ./tmp/menuv.zip
