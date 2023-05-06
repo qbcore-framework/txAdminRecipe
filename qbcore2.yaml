@@ -480,9 +480,9 @@ tasks:
     src: https://github.com/EclipseRPServer/dog-bodycam
 
   - action: download_github
-    dest: ./resources/[qb]/qb-idcard
+    dest: ./resources/[qb]/um-idcard
     ref: main 
-    src: https://github.com/EclipseRPServer/qb-idcard
+    src: https://github.com/EclipseRPServer/um-idcard
 
   - action: waste_time # prevent github throttling
     seconds: 10
