@@ -41,7 +41,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/download/v3.1.4/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/download/v3.4.1/ox_lib.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/ox_lib.zip
