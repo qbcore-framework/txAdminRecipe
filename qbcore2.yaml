@@ -105,7 +105,7 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/rpemotes
     ref: master
-    src: https://github.com/qbcore-framework/rpemotes
+    src: https://github.com/EclipseRPServer/rpemotes
 
   - action: download_github
     dest: ./resources/[standalone]/PolyZone
