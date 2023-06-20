@@ -34,21 +34,21 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v2.6.0/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.7.0/oxmysql.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
 
   - action: download_file
     path: ./tmp/files/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/download/v3.4.1/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/download/v3.6.1/ox_lib.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/ox_lib.zip
 
   - action: download_file
     path: ./tmp/files/illenium-appearance.zip
-    url: https://github.com/EclipseRPServer/illenium-appearance/releases/download/5.0.4/illenium-appearance.zip
+    url: https://github.com/EclipseRPServer/illenium-appearance/releases/download/5.0.5/illenium-appearance.zip
   - action: unzip
     dest: ./resources/[qb]
     src: ./tmp/files/illenium-appearance.zip
