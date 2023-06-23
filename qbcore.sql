@@ -33,14 +33,15 @@ CREATE TABLE IF NOT EXISTS `dealers` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `houselocations` (
+CREATE TABLE `houselocations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `label` varchar(255) DEFAULT NULL,
   `coords` text DEFAULT NULL,
   `owned` tinyint(2) DEFAULT NULL,
+  `houseID` varchar(50) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
-  `tier` tinyint(2) DEFAULT NULL,
+  `tier` text DEFAULT NULL,
   `garage` text DEFAULT NULL,
   `creator` varchar(50) DEFAULT NULL,
   `mlo` text DEFAULT NULL,
@@ -49,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `houselocations` (
   KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE IF NOT EXISTS `player_houses` (
+CREATE TABLE `player_houses` (
   `house` varchar(50) NOT NULL,
   `identifier` varchar(50) DEFAULT NULL,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -57,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `player_houses` (
   `keyholders` text DEFAULT NULL,
   `decorations` text DEFAULT NULL,
   `stash` text DEFAULT NULL,
+  `houseID` varchar(50) DEFAULT NULL,
   `outfit` text DEFAULT NULL,
   `logout` text DEFAULT NULL,
   `decorateStash` text DEFAULT NULL,
@@ -66,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `player_houses` (
   PRIMARY KEY (`house`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `house_plants` (
+CREATE TABLE `house_plants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `building` varchar(50) DEFAULT NULL,
   `stage` varchar(50) DEFAULT 'stage-a',
@@ -80,7 +82,11 @@ CREATE TABLE IF NOT EXISTS `house_plants` (
   PRIMARY KEY (`id`),
   KEY `building` (`building`),
   KEY `plantid` (`plantid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1;
+) ENGINE=InnoDB AUTO_INCREMENT=7123 DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `players` ADD IF NOT EXISTS `inside` VARCHAR(100);
+ALTER TABLE `houselocations` ADD IF NOT EXISTS `houseID` varchar(50) DEFAULT NULL;
+ALTER TABLE `player_houses` ADD IF NOT EXISTS `houseID` varchar(50) DEFAULT NULL;
 
 CREATE TABLE IF NOT EXISTS `lapraces` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -126,8 +132,6 @@ CREATE TABLE IF NOT EXISTS `players` (
   KEY `last_updated` (`last_updated`),
   KEY `license` (`license`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
-
-ALTER TABLE `players` ADD `inside` VARCHAR(100);
 
 CREATE TABLE IF NOT EXISTS `playerskins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
