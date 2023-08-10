@@ -33,7 +33,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/download/v2.7.3/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/download/v2.7.4/oxmysql.zip
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/files/oxmysql.zip
@@ -48,7 +48,7 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
-    src: https://github.com/qbcore-framework/bob74_ipl
+    src: https://github.com/Bob74/bob74_ipl
 
   - action: download_github
     dest: ./resources/[standalone]/safecracker
