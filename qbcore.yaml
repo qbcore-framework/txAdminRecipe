@@ -45,6 +45,9 @@ tasks:
     dest: ./resources/[standalone]/menuv
     src: ./tmp/menuv.zip
 
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
@@ -327,6 +330,9 @@ tasks:
     dest: ./resources/[qb]/qb-smallresources
     ref: main
     src: https://github.com/qbcore-framework/qb-smallresources
+
+  - action: waste_time # prevent github throttling
+    seconds: 5
 
   - action: download_github
     dest: ./resources/[qb]/qb-recyclejob
