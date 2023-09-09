@@ -132,9 +132,11 @@ CREATE TABLE IF NOT EXISTS `phone_invoices` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
 CREATE TABLE IF NOT EXISTS `phone_gallery` (
-   `citizenid` VARCHAR(255) NOT NULL ,
-   `image` VARCHAR(255) NOT NULL ,
-   `date` timestamp NULL DEFAULT current_timestamp()
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+   `citizenid` VARCHAR(255) NOT NULL,
+   `image` VARCHAR(255) NOT NULL,
+   `date` timestamp NULL DEFAULT current_timestamp(),
+   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `player_mails` (
