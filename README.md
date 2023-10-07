@@ -7,10 +7,12 @@ Please check the [**Recipe Documentation Page**](https://github.com/tabarra/txAd
 
 To use this recipe, Copy the following url for use as a custom recipe with txAdmin: https://raw.githubusercontent.com/unknown-rp-qbcore/txAdminRecipe/main/qbcore.yaml
 
-## NOTES ##
+## Notes
 Sync and merge this project with qb-core txAdminRecipe every so often. QB-Core is held at a specific commit to prevent breaking player.lua for PEFCL.
 
-## VERSIONS ##
+## Versions
+Keep this up-to-date.
+
 Resource      | Version
 ------------- | -------------
 [qb-core](https://github.com/qbcore-framework/qb-core)  | fa5bf97
