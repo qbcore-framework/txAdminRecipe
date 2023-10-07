@@ -462,6 +462,7 @@ tasks:
   # CUSTOM MODULES START HERE
 
   # NPWD PHONE
+  # https://projecterror.dev/docs/
   - action: download_github
     dest: ./resources/[phone]/qb-npwd
     ref: main
@@ -493,7 +494,7 @@ tasks:
     seconds: 5
 
   # PEFCL
-
+  # https://projecterror.dev/docs/pefcl/installation
   - action: download_github
     dest: ./resources/[bank]/qb-pefcl
     ref: main
