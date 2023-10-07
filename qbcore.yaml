@@ -482,7 +482,7 @@ tasks:
     src: ./tmp/files/npwd.zip
 
   - action: move_path
-    src: ./tmp/qbcore/npwd.json
+    src: ./tmp/qbcore/configs/npwd/npwd.json
     dest: ./resources/[phone]/npwd/config.json
     overwrite: true
 
@@ -510,8 +510,13 @@ tasks:
     src: ./tmp/files/pefcl.zip
 
   - action: move_path
-    src: ./tmp/qbcore/pefcl.json
+    src: ./tmp/qbcore/configs/pefcl/pefcl.json
     dest: ./resources/[bank]/pefcl/config.json
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/qbcore/configs/pefcl/player.lua
+    dest: ./resources/[qb]/qb-core/server/plauer.lua
     overwrite: true
 
   - action: query_database

@@ -6,7 +6,7 @@
     },
     "general": {
         "useResourceIntegration": true,
-        "toggleKey": "f1",
+        "toggleKey": "m",
         "toggleCommand": "phone"
     },
     "contacts": {
