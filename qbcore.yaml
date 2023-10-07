@@ -516,7 +516,7 @@ tasks:
 
   - action: move_path
     src: ./tmp/qbcore/configs/pefcl/player.lua
-    dest: ./resources/[qb]/qb-core/server/plauer.lua
+    dest: ./resources/[qb]/qb-core/server/player.lua
     overwrite: true
 
   - action: query_database
