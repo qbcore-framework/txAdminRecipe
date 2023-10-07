@@ -1,0 +1,43 @@
+{
+    "PhoneAsItem": {
+        "enabled": true,
+        "exportResource": "qb-npwd",
+        "exportFunction": "HasPhone"
+    },
+    "general": {
+        "useResourceIntegration": true,
+        "toggleKey": "f1",
+        "toggleCommand": "phone"
+    },
+    "contacts": {
+        "frameworkPay": false,
+        "payResource": "my-core-resource",
+        "payFunction": "myCheckerFunction"
+    },
+    "profanityFilter": {
+        "enabled": false,
+        "badWords": ["esx"]
+    },
+    "database": {
+        "useIdentifierPrefix": false,
+        "playerTable": "players",
+        "identifierColumn": "citizenid",
+        "identifierType": "license",
+        "profileQueries": true,
+        "phoneNumberColumn": "phone_number"
+    },
+    "debug": {
+        "level": "error",
+        "enabled": true,
+        "sentryEnabled": true
+    },
+    "defaultContacts": [],
+    "disabledApps": [],
+    "apps": ["pefcl"],
+    "voiceMessage": {
+        "enabled": false,
+        "authorizationHeader": "PE-Secret",
+        "url": "",
+        "returnedDataIndexes": ["url"]
+    }
+}

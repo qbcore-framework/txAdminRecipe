@@ -1,15 +1,15 @@
 $engine: 3
 $onesync: on
-name: QBCore Framework
-version: 2.2.4
-author: JericoFx & Kakarot & Hamy
-description: An advanced FiveM RP framework including jobs, gangs, housing & more!
+name: Unnamed RP
+version: 0.0.1
+author: RJ
+description: Unnamed RP Server
 
 tasks:
   #  Download Base Files
   - action: download_github
-    src: https://github.com/qbcore-framework/txAdminRecipe
-    ref: main
+    src: https://github.com/unknown-rp-qbcore/txAdminRecipe
+    ref: develop
     dest: ./tmp/qbcore
 
   - action: move_path
@@ -129,9 +129,16 @@ tasks:
     seconds: 5
 
   # Downloading QBCore resources
+  #
+  # HOLD qb-core at a specific commit to prevent breaking
+  # edits required for qb-core\server\player.lua
+  #
+  # When updating qb-core, ensure to grab latest version
+  # of qb-core\server\player.lua from the qbcore repo
+  # and re-apply the edits at https://github.com/project-error/qb-pefcl
   - action: download_github
     dest: ./resources/[qb]/qb-core
-    ref: main
+    ref: fa5bf97689a9717b95a6832614cba3ff04e4cb23
     src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
@@ -236,11 +243,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-radialmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-crypto
-    ref: main
-    src: https://github.com/qbcore-framework/qb-crypto
-
-  - action: download_github
     dest: ./resources/[qb]/qb-weathersync
     ref: main
     src: https://github.com/qbcore-framework/qb-weathersync
@@ -269,11 +271,6 @@ tasks:
     dest: ./resources/[qb]/qb-mechanicjob
     ref: main
     src: https://github.com/qbcore-framework/qb-mechanicjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-phone
-    ref: main
-    src: https://github.com/qbcore-framework/qb-phone
 
   - action: download_github
     dest: ./resources/[qb]/qb-vineyard
@@ -402,11 +399,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-commandbinding
 
   - action: download_github
-    dest: ./resources/[qb]/qb-banking
-    ref: main
-    src: https://github.com/qbcore-framework/qb-banking
-
-  - action: download_github
     dest: ./resources/[qb]/qb-clothing
     ref: main
     src: https://github.com/qbcore-framework/qb-clothing
@@ -463,6 +455,67 @@ tasks:
     dest: ./resources/[qb]/qb-loading
     ref: main
     src: https://github.com/qbcore-framework/qb-loading
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  # CUSTOM MODULES START HERE
+
+  # NPWD PHONE
+  - action: download_github
+    dest: ./resources/[phone]/qb-npwd
+    ref: main
+    src: https://github.com/qbcore-framework/qb-npwd
+
+  - action: query_database
+    file: ./resources/[phone]/qb-npwd/patch.sql
+
+  # npwd requires qb-npwd, screenshot-basic, and, obviously, QB-Core as a dependency
+  # v1.8.1
+  # Ensure to update npwd.json in this project to support the latest config.json
+  # when updating npwd
+  - action: download_file
+    path: ./tmp/files/npwd.zip
+    url: https://github.com/project-error/npwd/releases/download/v1.8.1/npwd.zip
+  - action: unzip
+    dest: ./resources/[phone]
+    src: ./tmp/files/npwd.zip
+
+  - action: move_path
+    src: ./tmp/qbcore/npwd.json
+    dest: ./resources/[phone]/npwd/config.json
+    overwrite: true
+
+  - action: query_database
+    file: ./resources/[phone]/npwd/import.sql
+
+  - action: waste_time # prevent github throttling
+    seconds: 5
+
+  # PEFCL
+
+  - action: download_github
+    dest: ./resources/[bank]/qb-pefcl
+    ref: main
+    src: https://github.com/project-error/qb-pefcl
+
+  # v1.0.12
+  # Ensure to check and update pefcl.json in this project to support the latest config.json
+  # when updating pefcl
+  - action: download_file
+    path: ./tmp/files/pefcl.zip
+    url: https://github.com/project-error/pefcl/releases/download/v1.0.12/pefcl.zip
+  - action: unzip
+    dest: ./resources/[bank]
+    src: ./tmp/files/pefcl.zip
+
+  - action: move_path
+    src: ./tmp/qbcore/pefcl.json
+    dest: ./resources/[bank]/pefcl/config.json
+    overwrite: true
+
+  - action: query_database
+    file: ./resources/[bank]/pefcl/import.sql
 
   # Clean up
   - action: remove_path

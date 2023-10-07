@@ -24,23 +24,6 @@ CREATE TABLE IF NOT EXISTS `bans` (
   KEY `ip` (`ip`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `crypto` (
-  `crypto` varchar(50) NOT NULL DEFAULT 'qbit',
-  `worth` int(11) NOT NULL DEFAULT 0,
-  `history` text DEFAULT NULL,
-  PRIMARY KEY (`crypto`)
-) ENGINE=InnoDB;
-
-CREATE TABLE IF NOT EXISTS `crypto_transactions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50) DEFAULT NULL,
-  `title` varchar(50) DEFAULT NULL,
-  `message` varchar(50) DEFAULT NULL,
-  `date` timestamp NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1;
-
 CREATE TABLE IF NOT EXISTS `dealers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '0',
@@ -120,17 +103,6 @@ CREATE TABLE IF NOT EXISTS `occasion_vehicles` (
   KEY `occasionId` (`occasionid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `phone_invoices` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50) DEFAULT NULL,
-  `amount` int(11) NOT NULL DEFAULT 0,
-  `society` tinytext DEFAULT NULL,
-  `sender` varchar(50) DEFAULT NULL,
-  `sendercitizenid` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1;
-
 CREATE TABLE IF NOT EXISTS `phone_gallery` (
    `citizenid` VARCHAR(255) NOT NULL ,
    `image` VARCHAR(255) NOT NULL ,
@@ -151,16 +123,6 @@ CREATE TABLE IF NOT EXISTS `player_mails` (
   KEY `citizenid` (`citizenid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `phone_messages` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50) DEFAULT NULL,
-  `number` varchar(50) DEFAULT NULL,
-  `messages` text DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `citizenid` (`citizenid`),
-  KEY `number` (`number`)
-) ENGINE=InnoDB AUTO_INCREMENT=1;
-
 CREATE TABLE IF NOT EXISTS `phone_tweets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(50) DEFAULT NULL,
@@ -171,16 +133,6 @@ CREATE TABLE IF NOT EXISTS `phone_tweets` (
   `url` text DEFAULT NULL,
   `picture` varchar(512) DEFAULT './img/default.png',
   `tweetId` varchar(25) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1;
-
-CREATE TABLE IF NOT EXISTS `player_contacts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50) DEFAULT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `number` varchar(50) DEFAULT NULL,
-  `iban` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
@@ -263,51 +215,6 @@ CREATE TABLE IF NOT EXISTS `player_warns` (
   `warnId` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
-
-CREATE TABLE IF NOT EXISTS `bank_accounts` (
-  `record_id` bigint(255) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(250) DEFAULT NULL,
-  `business` varchar(50) DEFAULT NULL,
-  `businessid` int(11) DEFAULT NULL,
-  `gangid` varchar(50) DEFAULT NULL,
-  `amount` bigint(255) NOT NULL DEFAULT 0,
-  `account_type` enum('Current','Savings','business','Gang') NOT NULL DEFAULT 'Current',
-  PRIMARY KEY (`record_id`),
-  UNIQUE KEY `citizenid` (`citizenid`),
-  KEY `business` (`business`),
-  KEY `businessid` (`businessid`),
-  KEY `gangid` (`gangid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
-CREATE TABLE IF NOT EXISTS `bank_statements` (
-  `record_id` bigint(255) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50) DEFAULT NULL,
-  `account` varchar(50) DEFAULT NULL,
-  `business` varchar(50) DEFAULT NULL,
-  `businessid` int(11) DEFAULT NULL,
-  `gangid` varchar(50) DEFAULT NULL,
-  `deposited` int(11) DEFAULT NULL,
-  `withdraw` int(11) DEFAULT NULL,
-  `balance` int(11) DEFAULT NULL,
-  `date` varchar(50) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`record_id`),
-  KEY `business` (`business`),
-  KEY `businessid` (`businessid`),
-  KEY `gangid` (`gangid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
-CREATE TABLE IF NOT EXISTS `bank_cards` (
-  `record_id` bigint(255) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50),
-  `cardNumber` varchar(50) DEFAULT NULL,
-  `cardPin` varchar(50) DEFAULT NULL,
-  `cardActive` tinyint(4) DEFAULT 1,
-  `cardLocked` tinyint(4) DEFAULT 0,
-  `cardType` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`citizenid`),
-  KEY `record_id` (`record_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `gloveboxitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
