@@ -7,7 +7,7 @@
   "frameworkIntegration": {
     "enabled": true,
     "resource": "qb-pefcl",
-    "syncInitialBankBalance": true
+    "syncInitialBankBalance": false
   },
   "database": {
     "profileQueries": true
@@ -184,7 +184,7 @@
     ]
   },
   "debug": {
-    "level": "error",
+    "level": "silly",
     "mockLicenses": false
   },
   "atmBlips": {
