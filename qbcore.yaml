@@ -81,11 +81,6 @@ tasks:
     src: https://github.com/qbcore-framework/connectqueue
 
   - action: download_github
-    dest: ./resources/[standalone]/rpemotes
-    ref: master
-    src: https://github.com/qbcore-framework/rpemotes
-
-  - action: download_github
     dest: ./resources/[standalone]/PolyZone
     ref: master
     src: https://github.com/qbcore-framework/PolyZone
