@@ -289,11 +289,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-scrapyard
 
   - action: download_github
-    dest: ./resources/[qb]/qb-tunerchip
-    ref: main
-    src: https://github.com/qbcore-framework/qb-tunerchip
-
-  - action: download_github
     dest: ./resources/[qb]/qb-towjob
     ref: main
     src: https://github.com/qbcore-framework/qb-towjob
