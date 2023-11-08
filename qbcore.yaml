@@ -387,11 +387,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-fitbit
 
   - action: download_github
-    dest: ./resources/[qb]/qb-commandbinding
-    ref: main
-    src: https://github.com/qbcore-framework/qb-commandbinding
-
-  - action: download_github
     dest: ./resources/[qb]/qb-banking
     ref: main
     src: https://github.com/qbcore-framework/qb-banking
