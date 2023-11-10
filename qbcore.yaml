@@ -217,11 +217,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-ambulancejob
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-vehiclefailure
-    ref: main
-    src: https://github.com/qbcore-framework/qb-vehiclefailure
-
   - action: waste_time # prevent github throttling
     seconds: 10
 
