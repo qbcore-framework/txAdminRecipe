@@ -173,11 +173,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-prison
 
   - action: download_github
-    dest: ./resources/[qb]/qb-atms
-    ref: main
-    src: https://github.com/qbcore-framework/qb-atms
-
-  - action: download_github
     dest: ./resources/[qb]/qb-hud
     ref: main
     src: https://github.com/qbcore-framework/qb-hud
