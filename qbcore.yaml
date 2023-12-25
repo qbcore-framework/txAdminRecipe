@@ -45,10 +45,12 @@ tasks:
     dest: ./resources/[standalone]/menuv
     src: ./tmp/menuv.zip
 
-  - action: download_github
-    dest: ./resources/[standalone]/bob74_ipl
-    ref: master
-    src: https://github.com/qbcore-framework/bob74_ipl
+  - action: download_file
+    path: ./tmp/files/bob74_ipl
+    url: https://github.com/Bob74/bob74_ipl/archive/refs/tags/2.1.3.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/2.1.3.zip
 
   - action: download_github
     dest: ./resources/[standalone]/safecracker
