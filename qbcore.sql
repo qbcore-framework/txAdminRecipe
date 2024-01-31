@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `player_houses` (
 CREATE TABLE IF NOT EXISTS `house_plants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `building` varchar(50) DEFAULT NULL,
-  `stage` varchar(50) DEFAULT 'stage-a',
+  `stage` int(11) DEFAULT 1,
   `sort` varchar(50) DEFAULT NULL,
   `gender` varchar(50) DEFAULT NULL,
   `food` int(11) DEFAULT 100,
