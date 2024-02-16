@@ -71,11 +71,6 @@ tasks:
     src: https://github.com/qbcore-framework/interact-sound
 
   - action: download_github
-    dest: ./resources/[standalone]/mhacking
-    ref: main
-    src: https://github.com/qbcore-framework/mhacking
-
-  - action: download_github
     dest: ./resources/[standalone]/connectqueue
     ref: master
     src: https://github.com/qbcore-framework/connectqueue
@@ -121,7 +116,7 @@ tasks:
     src: https://github.com/qbcore-framework/prison_map
 
   - action: waste_time # prevent github throttling
-    seconds: 5
+    seconds: 10
 
   # Downloading QBCore resources
   - action: download_github
@@ -299,11 +294,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-spawn
 
   - action: download_github
-    dest: ./resources/[qb]/qb-skillbar
-    ref: main
-    src: https://github.com/qbcore-framework/qb-skillbar
-
-  - action: download_github
     dest: ./resources/[qb]/qb-smallresources
     ref: main
     src: https://github.com/qbcore-framework/qb-smallresources
@@ -312,6 +302,9 @@ tasks:
     dest: ./resources/[qb]/qb-recyclejob
     ref: main
     src: https://github.com/qbcore-framework/qb-recyclejob
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-diving
@@ -332,6 +325,11 @@ tasks:
     dest: ./resources/[qb]/qb-pawnshop
     ref: main
     src: https://github.com/qbcore-framework/qb-pawnshop
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-minigames
+    ref: main
+    src: https://github.com/qbcore-framework/qb-minigames
 
   - action: download_github
     dest: ./resources/[qb]/qb-taxijob
@@ -365,11 +363,6 @@ tasks:
     dest: ./resources/[qb]/qb-truckerjob
     ref: main
     src: https://github.com/qbcore-framework/qb-truckerjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-keyminigame
-    ref: main
-    src: https://github.com/qbcore-framework/qb-keyminigame
 
   - action: download_github
     dest: ./resources/[qb]/qb-fitbit
@@ -410,11 +403,6 @@ tasks:
     dest: ./resources/[qb]/qb-shops
     ref: main
     src: https://github.com/qbcore-framework/qb-shops
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-lockpick
-    ref: main
-    src: https://github.com/qbcore-framework/qb-lockpick
 
   - action: download_github
     dest: ./resources/[qb]/qb-interior
