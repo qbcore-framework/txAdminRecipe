@@ -231,11 +231,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-policejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-traphouse
-    ref: main
-    src: https://github.com/qbcore-framework/qb-traphouse
-
-  - action: download_github
     dest: ./resources/[qb]/qb-apartments
     ref: main
     src: https://github.com/qbcore-framework/qb-apartments
@@ -303,6 +298,11 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-recyclejob
 
+  - action: download_github
+    dest: ./resources/[qb]/qb-crafting
+    ref: main
+    src: https://github.com/qbcore-framework/qb-crafting
+
   - action: waste_time # prevent github throttling
     seconds: 10
 
@@ -358,16 +358,6 @@ tasks:
     dest: ./resources/[qb]/qb-bankrobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-bankrobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-truckerjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-truckerjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-fitbit
-    ref: main
-    src: https://github.com/qbcore-framework/qb-fitbit
 
   - action: download_github
     dest: ./resources/[qb]/qb-banking
