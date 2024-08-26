@@ -30,6 +30,8 @@ tasks:
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
+  - action: remove_path
+    path: ./resources/[cfx-default]/[gameplay]/chat
 
   - action: download_file
     path: ./tmp/files/oxmysql.zip
