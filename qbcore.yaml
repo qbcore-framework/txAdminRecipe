@@ -2,7 +2,7 @@ $engine: 3
 $onesync: on
 name: Kalapani
 version: 2.2.4
-author: JericoFx & Kakarot & Hamy
+author: Chinnadan
 description: An advanced FiveM RP framework including jobs, gangs, housing & more!
 
 tasks:
@@ -422,4 +422,5 @@ tasks:
   # Clean up
   - action: remove_path
     path: ./tmp
+
 
