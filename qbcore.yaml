@@ -1,6 +1,6 @@
 $engine: 3
 $onesync: on
-name: QBCore Framework
+name: Kalapani
 version: 2.2.4
 author: JericoFx & Kakarot & Hamy
 description: An advanced FiveM RP framework including jobs, gangs, housing & more!
@@ -422,3 +422,4 @@ tasks:
   # Clean up
   - action: remove_path
     path: ./tmp
+
