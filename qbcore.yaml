@@ -49,7 +49,7 @@ tasks:
 
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
-    ref: master
+    ref: enhanced
     src: https://github.com/qbcore-framework/bob74_ipl
 
   - action: download_github
@@ -99,17 +99,17 @@ tasks:
     # MAPS
   - action: download_github
     dest: ./resources/[defaultmaps]/hospital_map
-    ref: main
+    ref: enhanced
     src: https://github.com/qbcore-framework/hospital_map
 
   - action: download_github
     dest: ./resources/[defaultmaps]/dealer_map
-    ref: main
+    ref: enhanced
     src: https://github.com/qbcore-framework/dealer_map
 
   - action: download_github
     dest: ./resources/[defaultmaps]/[prison_map]
-    ref: main
+    ref: enhanced
     src: https://github.com/qbcore-framework/prison_map
 
   - action: waste_time # prevent github throttling
@@ -166,7 +166,7 @@ tasks:
 
   - action: download_github
     dest: ./resources/[qb]/qb-hud
-    ref: main
+    ref: enhanced
     src: https://github.com/qbcore-framework/qb-hud
 
   - action: download_github
@@ -209,7 +209,7 @@ tasks:
 
   - action: download_github
     dest: ./resources/[qb]/qb-radialmenu
-    ref: main
+    ref: enhanced
     src: https://github.com/qbcore-framework/qb-radialmenu
 
   - action: download_github
@@ -239,7 +239,7 @@ tasks:
 
   - action: download_github
     dest: ./resources/[qb]/qb-mechanicjob
-    ref: main
+    ref: enhanced
     src: https://github.com/qbcore-framework/qb-mechanicjob
 
   - action: download_github
@@ -398,7 +398,7 @@ tasks:
 
   - action: download_github
     dest: ./resources/[qb]/qb-interior
-    ref: main
+    ref: enhanced
     src: https://github.com/qbcore-framework/qb-interior
 
   - action: download_github
