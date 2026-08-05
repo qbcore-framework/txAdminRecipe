@@ -57,10 +57,12 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/safecracker
 
-  - action: download_github
-    dest: ./resources/[standalone]/screenshot-basic
-    ref: master
-    src: https://github.com/citizenfx/screenshot-basic
+  - action: download_file
+    path: ./tmp/files/screencapture.zip
+    url: https://github.com/itschip/screencapture/releases/latest/download/screencapture.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/screencapture.zip
 
   - action: download_github
     dest: ./resources/[standalone]/progressbar
